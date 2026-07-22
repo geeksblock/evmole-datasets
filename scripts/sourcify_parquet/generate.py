@@ -40,7 +40,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--cache", type=Path, required=True, help="Sourcify Parquet cache")
     parser.add_argument("--output", type=Path, required=True, help="output directory")
-    parser.add_argument("--count", type=int, required=True, help="number of contracts to generate")
+    parser.add_argument(
+        "--count", type=int, default=1000, help="number of contracts to generate (default: 1000)"
+    )
     parser.add_argument("--chain-id", type=int, default=1, help="chain ID (default: 1)")
     parser.add_argument("--compiler", required=True, help="compiler name, for example solc or vyper")
     parser.add_argument(
@@ -154,7 +156,7 @@ def select_candidates(
     connection: duckdb.DuckDBPyConnection,
     args: argparse.Namespace,
     tables: dict[str, str],
-) -> tuple[list[tuple], list[str]]:
+) -> tuple[list[tuple], list[str], dict[str, int]]:
     """Select candidates while every hash join has one bounded input."""
     sample_count = math.ceil(args.count * args.candidate_factor)
     repeatable_seed = sampling_seed(args.seed)
@@ -167,16 +169,29 @@ def select_candidates(
     connection.execute(
         f"""
         CREATE TEMP TABLE sampled_deployments AS
-        SELECT id AS deployment_id, address, contract_id
+        SELECT deployment_id, address, contract_id
         FROM (
-            SELECT id, address, contract_id
-            FROM {tables['contract_deployments']}
-            WHERE chain_id = ?
-        ) AS chain_deployments
+            SELECT DISTINCT
+                deployments.id AS deployment_id,
+                deployments.address,
+                deployments.contract_id
+            FROM {tables['contract_deployments']} AS deployments
+            JOIN {tables['verified_contracts']} AS vc
+                ON vc.deployment_id = deployments.id
+            JOIN {tables['compiled_contracts']} AS cc
+                ON cc.id = vc.compilation_id
+            WHERE deployments.chain_id = ?
+              AND vc.runtime_match = true
+              {exact_match_condition}
+              AND lower(cc.compiler) = lower(?)
+        ) AS compiler_deployments
         USING SAMPLE reservoir({sample_count} ROWS) REPEATABLE({repeatable_seed})
         """,
-        [args.chain_id],
+        [args.chain_id, args.compiler],
     )
+    sampled_deployment_count = connection.execute(
+        "SELECT count(*) FROM sampled_deployments"
+    ).fetchone()[0]
 
     connection.execute(
         f"""
@@ -193,6 +208,9 @@ def select_candidates(
           {exact_match_condition}
         """
     )
+    matched_verification_count = connection.execute(
+        "SELECT count(*) FROM matched_verifications"
+    ).fetchone()[0]
     connection.execute("DROP TABLE sampled_deployments")
 
     compiled_parameters: list = [args.compiler, args.functions_min]
@@ -241,6 +259,9 @@ def select_candidates(
         """,
         compiled_parameters,
     )
+    compiled_candidate_count = connection.execute(
+        "SELECT count(*) FROM compiled_candidates"
+    ).fetchone()[0]
     connection.execute("DROP TABLE matched_verifications")
 
     connection.execute(
@@ -275,7 +296,13 @@ def select_candidates(
     rows = result.fetchall()
     columns = [item[0] for item in result.description]
     connection.execute("DROP TABLE contract_candidates")
-    return rows, columns
+    stats = {
+        "sampled_deployments": sampled_deployment_count,
+        "matched_verifications": matched_verification_count,
+        "compiled_candidates": compiled_candidate_count,
+        "bytecode_candidates": len(rows),
+    }
+    return rows, columns, stats
 
 
 def json_value(value, fallback):
@@ -287,15 +314,19 @@ def json_value(value, fallback):
 
 
 def prepare_destination(output: Path, overwrite: bool) -> Path:
+    validate_destination(output, overwrite)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    temporary = output.parent / f".{output.name}.tmp-{uuid.uuid4().hex}"
+    temporary.mkdir()
+    return temporary
+
+
+def validate_destination(output: Path, overwrite: bool) -> None:
     if output.exists():
         if not overwrite:
             raise RuntimeError(f"output already exists: {output}; use --overwrite to replace it")
         if not output.is_dir():
             raise RuntimeError(f"output exists and is not a directory: {output}")
-    output.parent.mkdir(parents=True, exist_ok=True)
-    temporary = output.parent / f".{output.name}.tmp-{uuid.uuid4().hex}"
-    temporary.mkdir()
-    return temporary
 
 
 def deduplicate_rows(
@@ -438,6 +469,7 @@ def hydrate_and_write(
 
 def main() -> int:
     args = parse_args()
+    validate_destination(args.output, args.overwrite)
     tables = {table: parquet_expression(args.cache, table) for table in TABLES}
 
     connection = duckdb.connect()
@@ -450,7 +482,7 @@ def main() -> int:
         connection.execute(f"SET temp_directory = {sql_string(str(temp_directory.resolve()))}")
         connection.execute(f"SET memory_limit = {sql_string(args.memory_limit)}")
 
-        selected, selected_columns = select_candidates(connection, args, tables)
+        selected, selected_columns, selection_stats = select_candidates(connection, args, tables)
         selected = deduplicate_rows(
             selected,
             selected_columns,
@@ -480,7 +512,30 @@ def main() -> int:
     finally:
         connection.close()
 
-    print(f"Wrote {written} contracts to {args.output}", file=sys.stderr)
+    print(f"Wrote {written} contracts to {args.output} (requested {args.count})", file=sys.stderr)
+    if written < args.count:
+        match_description = "runtime + metadata" if args.match == "exact" else "runtime"
+        print("Selection summary:", file=sys.stderr)
+        print(
+            f"  candidate deployments on chain {args.chain_id}: "
+            f"{selection_stats['sampled_deployments']}",
+            file=sys.stderr,
+        )
+        print(
+            f"  {match_description} verification matches: "
+            f"{selection_stats['matched_verifications']}",
+            file=sys.stderr,
+        )
+        print(
+            f"  compiler/version/function matches: "
+            f"{selection_stats['compiled_candidates']}",
+            file=sys.stderr,
+        )
+        print(
+            f"  bytecode filter matches: {selection_stats['bytecode_candidates']}",
+            file=sys.stderr,
+        )
+        print(f"  selected after deduplication: {written}", file=sys.stderr)
     return 0
 
 
