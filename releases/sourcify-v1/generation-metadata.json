@@ -1,0 +1,13 @@
+{
+  "formatVersion": 1,
+  "pythonVersion": "3.13.11 (main, Jan 28 2026, 00:01:45) [Clang 21.1.4 ]",
+  "duckdbVersion": "1.5.5",
+  "files": {
+    "suite.json": "b10d32e9fa2525b8b31de364ba4c1f08e61227ecc082bd51fa5c970327d25fd1",
+    "generate.py": "514ee36063ff5d3b594240932e1596186d33e23aa7e614e3f5300360a485b9b6",
+    "dataset_common.py": "b7ba0ccc1c2fe1dcdd9b8234aea65cf3e04d9a8e6951e0c8b452ce4f241c347e",
+    "select_dataset.py": "5ca6cdeed100ee4a601e380ac10c736da636402e19421759c53ead56ca6aa89a",
+    "package.py": "2501e602d9cf052a7d0b52fb3695f7f070e1020415a19b8a34524796d1fed170",
+    "suite.py": "42d54779c0eae104d967d9bcb329b4edcf747cb77b65a5a313bed5e473d263ac"
+  }
+}
