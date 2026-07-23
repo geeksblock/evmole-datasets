@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures
+import json
 import os
 import sys
 import urllib.parse
@@ -33,6 +34,8 @@ DEFAULT_TABLES = (
 class RemoteObject:
     key: str
     size: int
+    etag: str
+    last_modified: str
 
 
 def request(url: str):
@@ -68,6 +71,8 @@ def list_table(base_url: str, table: str) -> list[RemoteObject]:
                 RemoteObject(
                     key=key,
                     size=int(text(element, "Size", "0")),
+                    etag=text(element, "ETag").strip('"'),
+                    last_modified=text(element, "LastModified"),
                 )
             )
         objects.extend(page)
@@ -94,6 +99,53 @@ def local_files(cache: Path, table: str) -> dict[str, int]:
     if not table_dir.exists():
         return {}
     return {path.name: path.stat().st_size for path in table_dir.glob("*.parquet") if path.is_file()}
+
+
+def manifest_path(cache: Path) -> Path:
+    return cache / ".sourcify-export-v2.json"
+
+
+def read_manifest(cache: Path) -> dict[str, dict]:
+    path = manifest_path(cache)
+    if not path.exists():
+        return {}
+    document = json.loads(path.read_text(encoding="utf-8"))
+    return {
+        item["key"]: item
+        for item in document.get("objects", [])
+        if isinstance(item, dict) and isinstance(item.get("key"), str)
+    }
+
+
+def write_manifest(
+    cache: Path,
+    base_url: str,
+    listings: dict[str, list[RemoteObject]],
+) -> None:
+    path = manifest_path(cache)
+    temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    objects = sorted(
+        (obj for listing in listings.values() for obj in listing),
+        key=lambda obj: obj.key,
+    )
+    document = {
+        "formatVersion": 1,
+        "baseUrl": base_url,
+        "objects": [
+            {
+                "key": obj.key,
+                "size": obj.size,
+                "etag": obj.etag,
+                "lastModified": obj.last_modified,
+            }
+            for obj in objects
+        ],
+    }
+    try:
+        temporary.write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8")
+        os.replace(temporary, path)
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def download(base_url: str, cache: Path, obj: RemoteObject) -> None:
@@ -133,13 +185,22 @@ def parse_args() -> argparse.Namespace:
 def synchronize(args: argparse.Namespace) -> int:
     listings: dict[str, list[RemoteObject]] = {}
     changed: list[RemoteObject] = []
+    previous_manifest = read_manifest(args.cache)
 
     for table in args.tables:
         print(f"Listing {table}...", file=sys.stderr)
         listing = list_table(args.base_url.rstrip("/"), table)
         listings[table] = listing
         cached = local_files(args.cache, table)
-        table_changed = [obj for obj in listing if cached.get(Path(obj.key).name) != obj.size]
+        table_changed = [
+            obj
+            for obj in listing
+            if cached.get(Path(obj.key).name) != obj.size
+            or (
+                obj.key in previous_manifest
+                and previous_manifest[obj.key].get("etag") != obj.etag
+            )
+        ]
         changed.extend(table_changed)
         print(f"  {len(listing)} files, {len(table_changed)} new or changed", file=sys.stderr)
 
@@ -171,6 +232,7 @@ def synchronize(args: argparse.Namespace) -> int:
                         path.unlink()
                         print(f"Removed {path}", file=sys.stderr)
 
+    write_manifest(args.cache, args.base_url.rstrip("/"), listings)
     print("Cache is up to date.", file=sys.stderr)
     return 0
 

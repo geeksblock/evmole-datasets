@@ -59,6 +59,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--match", choices=("any", "exact"), default="exact")
     parser.add_argument("--allow-duplicates", action="store_true", help="retain duplicate runtime bytecodes")
     parser.add_argument(
+        "--include-storage-layout",
+        action="store_true",
+        help="include storageLayout and transientStorageLayout compilation artifacts",
+    )
+    parser.add_argument(
         "--candidate-factor", type=float, default=4.0, metavar="FACTOR",
         help="deployments to sample per requested contract (default: 4)",
     )
@@ -361,6 +366,7 @@ def hydrate_and_write(
     destination: Path,
     batch_size: int,
     chain_id: int,
+    include_storage_layout: bool,
 ) -> int:
     indexes = {name: selected_columns.index(name) for name in selected_columns}
     connection.execute(
@@ -408,7 +414,12 @@ def hydrate_and_write(
             cc.compiler,
             cc.version AS compiler_version,
             cc.compiler_settings,
-            json_extract(cc.compilation_artifacts, '$.abi') AS abi
+            json_extract(cc.compilation_artifacts, '$.abi') AS abi,
+            json_extract(cc.compilation_artifacts, '$.storageLayout') AS storage_layout,
+            json_extract(
+                cc.compilation_artifacts,
+                '$.transientStorageLayout'
+            ) AS transient_storage_layout
         FROM {tables['compiled_contracts']} AS cc
         JOIN selected_compilation_ids AS selected ON selected.compilation_id = cc.id
         """
@@ -425,6 +436,8 @@ def hydrate_and_write(
             details.compiler_version,
             details.compiler_settings,
             details.abi,
+            details.storage_layout,
+            details.transient_storage_layout,
             selected.runtime_code_hash,
             code.code,
             selected.bytecode_size,
@@ -458,6 +471,11 @@ def hydrate_and_write(
                     "functionCount": row["function_count"],
                 },
             }
+            if include_storage_layout:
+                document["storageLayout"] = json_value(row["storage_layout"], {})
+                document["transientStorageLayout"] = json_value(
+                    row["transient_storage_layout"], {}
+                )
             with (destination / f"{address}.json").open("w", encoding="utf-8") as handle:
                 json.dump(document, handle, separators=(",", ":"))
                 handle.write("\n")
@@ -498,6 +516,7 @@ def main() -> int:
             temporary,
             args.write_batch_size,
             args.chain_id,
+            args.include_storage_layout,
         )
         if written != len(selected):
             raise RuntimeError(f"selected {len(selected)} contracts, but hydrated {written}")

@@ -1,0 +1,70 @@
+{
+  "formatVersion": 1,
+  "seed": "evmole-sourcify-suite-v1",
+  "chainId": 1,
+  "match": "exact",
+  "bytecodeSizeMax": 131072,
+  "candidateFactor": 6,
+  "candidatePools": {
+    "solc-main": {
+      "compiler": "solc",
+      "count": 25000,
+      "includeStorageLayout": true
+    },
+    "solc-legacy": {
+      "compiler": "solc",
+      "count": 5000,
+      "compilerVersionMax": "0.7.6",
+      "includeStorageLayout": true
+    },
+    "solc-modern": {
+      "compiler": "solc",
+      "count": 5000,
+      "compilerVersionMin": "0.8.24",
+      "includeStorageLayout": true
+    },
+    "vyper-main": {
+      "compiler": "vyper",
+      "count": 5000,
+      "match": "any"
+    }
+  },
+  "datasets": {
+    "solidity-random10k": {
+      "strategy": "random",
+      "count": 10000,
+      "coverageTarget": 1,
+      "compilers": ["solc"],
+      "pools": ["solc-main"]
+    },
+    "solidity-coverage2k": {
+      "strategy": "coverage",
+      "count": 2000,
+      "coverageTarget": 40,
+      "compilers": ["solc"],
+      "pools": ["solc-main", "solc-legacy", "solc-modern"],
+      "excludeDatasets": ["solidity-random10k"]
+    },
+    "vyper-coverage1k": {
+      "strategy": "coverage",
+      "count": 1000,
+      "coverageTarget": 30,
+      "compilers": ["vyper"],
+      "pools": ["vyper-main"]
+    },
+    "storage-coverage1k": {
+      "strategy": "storage",
+      "count": 1000,
+      "coverageTarget": 30,
+      "compilers": ["solc"],
+      "pools": ["solc-main", "solc-legacy", "solc-modern"]
+    },
+    "flow-challenge500": {
+      "strategy": "flow",
+      "count": 500,
+      "coverageTarget": 15,
+      "compilers": ["solc", "vyper"],
+      "pools": ["solc-main", "solc-legacy", "solc-modern", "vyper-main"]
+    }
+  }
+}
