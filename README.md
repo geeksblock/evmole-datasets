@@ -20,6 +20,9 @@ contracts to process:
 - selection covers compiler generations, compiler settings, ABI shapes,
   bytecode sizes, structural complexity, modern opcodes, and persistent and
   transient storage layouts;
+- Solidity compilation targets are classified from their exact verified source
+  declaration so deployed libraries are excluded even when their bytecode lacks
+  the usual call-protection prefix;
 - runtime bytecode is deduplicated after normalizing compiler metadata; and
 - every release includes the selected-contract manifests, coverage reports,
   source-cache inventory, tool versions, generation-code hashes, and

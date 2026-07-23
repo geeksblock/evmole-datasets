@@ -21,6 +21,15 @@ from pathlib import Path
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+CACHE_TABLES = (
+    "code",
+    "sources",
+    "contracts",
+    "compiled_contracts_sources",
+    "contract_deployments",
+    "compiled_contracts",
+    "verified_contracts",
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -51,7 +60,7 @@ def file_sha256(path: Path) -> str:
 
 def local_cache_manifest(cache: Path) -> dict:
     objects = []
-    for table in ("code", "contracts", "contract_deployments", "compiled_contracts", "verified_contracts"):
+    for table in CACHE_TABLES:
         for path in sorted((cache / table).glob("*.parquet")):
             information = path.stat()
             objects.append(
@@ -133,6 +142,8 @@ def selector_command(args: argparse.Namespace, profile: dict, name: str, dataset
         command.extend(["--input", str(args.work / "candidates" / pool)])
     for compiler in dataset.get("compilers", []):
         command.extend(["--compiler", compiler])
+    for contract_kind in profile.get("excludeContractKinds", []):
+        command.extend(["--exclude-contract-kind", contract_kind])
     for excluded in dataset.get("excludeDatasets", []):
         command.extend(
             [
@@ -206,7 +217,18 @@ def main() -> int:
         encoding="utf-8",
     )
     cache_manifest = args.cache / ".sourcify-export-v2.json"
+    upstream_tables: set[str] = set()
     if cache_manifest.exists():
+        cache_document = json.loads(cache_manifest.read_text(encoding="utf-8"))
+        upstream_tables = {
+            parts[1]
+            for item in cache_document.get("objects", [])
+            if isinstance(item, dict)
+            and isinstance(item.get("key"), str)
+            and len(parts := Path(item["key"]).parts) == 3
+            and parts[0] == "v2"
+        }
+    if set(CACHE_TABLES).issubset(upstream_tables):
         shutil.copyfile(cache_manifest, args.output / "cache-manifest.json")
     else:
         (args.output / "cache-manifest.json").write_text(

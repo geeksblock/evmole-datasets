@@ -32,13 +32,15 @@ The suite deliberately has two kinds of general-purpose data:
 contracts rather than re-benchmarking part of the baseline.
 
 All datasets use Ethereum mainnet, successful runtime matches, nonempty
-deployed bytecode, and exclude Solidity library prefixes that the current
-reference selector implementation cannot handle. Solidity pools additionally
-require exact runtime metadata matches. Vyper uses runtime matches without the
-metadata-match requirement because Sourcify does not populate that flag for
-the eligible Vyper deployments in this snapshot. Candidate generation allows
-ABI function count zero so fallback-only and false-positive control contracts
-remain eligible.
+deployed bytecode, and exclude Solidity libraries that the current reference
+selector implementation cannot handle. Library classification resolves each
+compilation target to its exact verified source and parses the top-level
+declaration; bytecode-prefix checks remain as an early filter but are not
+treated as authoritative. Solidity pools additionally require exact runtime
+metadata matches. Vyper uses runtime matches without the metadata-match
+requirement because Sourcify does not populate that flag for the eligible Vyper
+deployments in this snapshot. Candidate generation allows ABI function count
+zero so fallback-only and false-positive control contracts remain eligible.
 
 ## 1. Synchronize the Parquet cache
 
@@ -50,6 +52,10 @@ The synchronizer downloads missing or changed objects. It writes
 `/mnt/sourcify-parquet/.sourcify-export-v2.json`, recording the upstream object
 keys, sizes, ETags, and modification timestamps. On later syncs, ETags detect a
 rewritten newest Parquet object even if its compressed size did not change.
+The suite requires the `sources` and `compiled_contracts_sources` tables in
+addition to the five bytecode, compilation, deployment, and verification
+tables. These two tables connect a compilation target to its source content for
+contract-kind classification.
 
 Use `--status` to check without downloading, `--jobs` to control parallelism,
 or `--prune` to remove local Parquet files absent upstream.
@@ -66,10 +72,13 @@ uv run suite.py \
 
 The command performs three stages:
 
-1. `generate.py` creates bounded random candidate pools. Separate legacy and
-   modern Solidity pools prevent a current-version-heavy main pool from hiding
-   old compiler families or recent opcodes.
-2. `select_dataset.py` removes duplicate executable bytecode and applies the
+1. `generate.py` creates bounded random candidate pools, resolves every exact
+   Solidity compilation target to its verified source, and excludes targets
+   declared as libraries before writing candidates. Separate legacy and modern
+   Solidity pools prevent a current-version-heavy main pool from hiding old
+   compiler families or recent opcodes.
+2. `select_dataset.py` defensively excludes libraries, removes duplicate executable
+   bytecode, and applies the
    selection strategy from `suite.json`. Storage selections are materialized
    with the legacy-compatible `runtimeBytecode` field.
 3. `package.py` creates deterministic `.tar.gz` files with sorted entries,
@@ -131,6 +140,10 @@ Selection is deterministic for the same:
 - `suite.json`;
 - seed;
 - candidate pool contents.
+
+Candidate JSON records include the compilation ID, fully qualified target name,
+and source-derived contract kind. `generate.py` resolves kinds in a bounded
+pass over the source tables while hydrating each candidate pool.
 
 Sourcify is continuously updated, so running against a newer cache is expected
 to produce a different but equivalently selected suite. The copied cache
@@ -221,6 +234,7 @@ python3 select_dataset.py \
   --name solidity-coverage2k \
   --strategy coverage \
   --compiler solc \
+  --exclude-contract-kind library \
   --coverage-target 40 \
   --count 2000 \
   --seed evmole-sourcify-suite-v1/dataset/solidity-coverage2k

@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import argparse
+import collections
 import hashlib
 import json
 import math
@@ -24,8 +25,20 @@ from pathlib import Path
 import duckdb
 
 
-TABLES = ("code", "contracts", "contract_deployments", "compiled_contracts", "verified_contracts")
+TABLES = (
+    "code",
+    "sources",
+    "contracts",
+    "compiled_contracts_sources",
+    "contract_deployments",
+    "compiled_contracts",
+    "verified_contracts",
+)
 SEMVER_RE = re.compile(r"^v?(\d+)\.(\d+)\.(\d+)")
+DECLARATION_RE = re.compile(
+    r"\b(?:(abstract)\s+)?(contract|interface|library)\s+"
+    r"([A-Za-z_$][A-Za-z0-9_$]*)(?![A-Za-z0-9_$])"
+)
 EXCLUDED_CODE_PREFIXES = (bytes.fromhex("73"), bytes.fromhex("608060405230"))
 
 
@@ -140,6 +153,77 @@ def blob_has_prefix(expression: str, prefix: bytes) -> str:
     ]
     comparison = " AND ".join(comparisons)
     return f"(CASE WHEN octet_length({expression}) >= {len(prefix)} THEN {comparison} ELSE false END)"
+
+
+def strip_comments_and_strings(source: str) -> str:
+    result = list(source)
+    index = 0
+    state = "code"
+    quote = ""
+    while index < len(source):
+        char = source[index]
+        following = source[index + 1] if index + 1 < len(source) else ""
+        if state == "code":
+            if char == "/" and following == "/":
+                result[index] = result[index + 1] = " "
+                index += 2
+                state = "line-comment"
+                continue
+            if char == "/" and following == "*":
+                result[index] = result[index + 1] = " "
+                index += 2
+                state = "block-comment"
+                continue
+            if char in {'"', "'"}:
+                result[index] = " "
+                quote = char
+                state = "string"
+        elif state == "line-comment":
+            if char == "\n":
+                state = "code"
+            else:
+                result[index] = " "
+        elif state == "block-comment":
+            if char == "*" and following == "/":
+                result[index] = result[index + 1] = " "
+                index += 2
+                state = "code"
+                continue
+            if char != "\n":
+                result[index] = " "
+        elif state == "string":
+            if char == "\\" and following:
+                result[index] = result[index + 1] = " "
+                index += 2
+                continue
+            if char == quote:
+                state = "code"
+            if char != "\n":
+                result[index] = " "
+        index += 1
+    return "".join(result)
+
+
+def declaration_kinds(source: str, contract_name: str) -> set[str]:
+    return {
+        kind
+        for _abstract, kind, name in DECLARATION_RE.findall(source)
+        if name == contract_name
+    }
+
+
+def contract_kind(source: str, contract_name: str) -> str:
+    matches = declaration_kinds(strip_comments_and_strings(source), contract_name)
+    if not matches:
+        # Some verified flattened sources contain lexer-hostile text outside the
+        # compiled declaration. A unique raw match is still safe: compilation
+        # proves that a declaration with the exact target name exists.
+        matches = declaration_kinds(source, contract_name)
+    if len(matches) != 1:
+        raise RuntimeError(
+            f"expected one declaration kind for {contract_name!r}, found {sorted(matches)}"
+        )
+    return matches.pop()
 
 
 def version_filter(args: argparse.Namespace) -> str:
@@ -337,7 +421,7 @@ def validate_destination(output: Path, overwrite: bool) -> None:
 def deduplicate_rows(
     rows: list[tuple],
     columns: list[str],
-    count: int,
+    limit: int,
     allow_duplicates: bool,
 ) -> list[tuple]:
     address_index = columns.index("address")
@@ -353,9 +437,101 @@ def deduplicate_rows(
         addresses.add(address)
         runtime_hashes.add(runtime_hash)
         result.append(row)
-        if len(result) == count:
+        if len(result) == limit:
             break
     return result
+
+
+def populate_contract_kinds(
+    connection: duckdb.DuckDBPyConnection,
+    tables: dict[str, str],
+) -> collections.Counter[str]:
+    connection.execute(
+        """
+        CREATE TEMP TABLE contract_kinds (
+            compilation_id VARCHAR PRIMARY KEY,
+            contract_kind VARCHAR
+        )
+        """
+    )
+    connection.execute(
+        """
+        INSERT INTO contract_kinds
+        SELECT compilation_id, 'contract'
+        FROM compilation_details
+        WHERE lower(compiler) <> 'solc'
+        """
+    )
+    solc_compilations = {
+        row[0]: row[1]
+        for row in connection.execute(
+            """
+            SELECT compilation_id, fully_qualified_name
+            FROM compilation_details
+            WHERE lower(compiler) = 'solc'
+            """
+        ).fetchall()
+    }
+    solc_count = len(solc_compilations)
+    if not solc_count:
+        return collections.Counter({"contract": connection.execute(
+            "SELECT count(*) FROM contract_kinds"
+        ).fetchone()[0]})
+
+    connection.execute(
+        f"""
+        CREATE TEMP TABLE target_source_hashes AS
+        SELECT
+            details.compilation_id,
+            details.contract_name,
+            details.fully_qualified_name,
+            links.source_hash
+        FROM {tables['compiled_contracts_sources']} AS links
+        JOIN compilation_details AS details
+          ON details.compilation_id = links.compilation_id
+         AND regexp_replace(details.fully_qualified_name, ':[^:]*$', '') = links.path
+        WHERE lower(details.compiler) = 'solc'
+        """
+    )
+    result = connection.execute(
+        f"""
+        SELECT targets.*, sources.content
+        FROM {tables['sources']} AS sources
+        JOIN target_source_hashes AS targets
+          ON targets.source_hash = sources.source_hash
+        """
+    )
+    columns = [item[0] for item in result.description]
+    resolved: set[str] = set()
+    kind_rows: list[tuple[str, str]] = []
+    counts: collections.Counter[str] = collections.Counter()
+    while batch := result.fetchmany(1000):
+        for values in batch:
+            row = dict(zip(columns, values, strict=True))
+            compilation_id = row["compilation_id"]
+            if compilation_id in resolved:
+                raise RuntimeError(
+                    f"multiple target sources for compilation {compilation_id}"
+                )
+            kind = contract_kind(row["content"], row["contract_name"])
+            resolved.add(compilation_id)
+            kind_rows.append((compilation_id, kind))
+            counts[kind] += 1
+    connection.execute("DROP TABLE target_source_hashes")
+    if len(resolved) != solc_count:
+        missing = [
+            (compilation_id, solc_compilations[compilation_id])
+            for compilation_id in sorted(set(solc_compilations) - resolved)[:10]
+        ]
+        raise RuntimeError(
+            f"resolved source kinds for {len(resolved)} of {solc_count} Solidity "
+            f"compilations; missing examples: {missing}"
+        )
+    connection.executemany("INSERT INTO contract_kinds VALUES (?, ?)", kind_rows)
+    counts["contract"] += connection.execute(
+        "SELECT count(*) FROM compilation_details WHERE lower(compiler) <> 'solc'"
+    ).fetchone()[0]
+    return counts
 
 
 def hydrate_and_write(
@@ -367,11 +543,13 @@ def hydrate_and_write(
     batch_size: int,
     chain_id: int,
     include_storage_layout: bool,
-) -> int:
+    requested_count: int,
+) -> tuple[int, collections.Counter[str]]:
     indexes = {name: selected_columns.index(name) for name in selected_columns}
     connection.execute(
         """
         CREATE TEMP TABLE selected_contracts (
+            selection_order BIGINT,
             verified_contract_id BIGINT,
             compilation_id VARCHAR,
             chain_id BIGINT,
@@ -384,9 +562,10 @@ def hydrate_and_write(
     )
     if selected:
         connection.executemany(
-            "INSERT INTO selected_contracts VALUES (?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO selected_contracts VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
             [
                 (
+                    selection_order,
                     row[indexes["verified_contract_id"]],
                     row[indexes["compilation_id"]],
                     chain_id,
@@ -395,7 +574,7 @@ def hydrate_and_write(
                     row[indexes["bytecode_size"]],
                     row[indexes["function_count"]],
                 )
-                for row in selected
+                for selection_order, row in enumerate(selected)
             ],
         )
 
@@ -413,6 +592,9 @@ def hydrate_and_write(
             cc.id AS compilation_id,
             cc.compiler,
             cc.version AS compiler_version,
+            cc.language,
+            cc.name AS contract_name,
+            cc.fully_qualified_name,
             cc.compiler_settings,
             json_extract(cc.compilation_artifacts, '$.abi') AS abi,
             json_extract(cc.compilation_artifacts, '$.storageLayout') AS storage_layout,
@@ -425,19 +607,25 @@ def hydrate_and_write(
         """
     )
     connection.execute("DROP TABLE selected_compilation_ids")
+    kind_counts = populate_contract_kinds(connection, tables)
 
     result = connection.execute(
         f"""
         SELECT
             selected.verified_contract_id,
+            selected.compilation_id,
             selected.chain_id,
             selected.address,
             details.compiler,
             details.compiler_version,
+            details.language,
+            details.contract_name,
+            details.fully_qualified_name,
             details.compiler_settings,
             details.abi,
             details.storage_layout,
             details.transient_storage_layout,
+            kinds.contract_kind,
             selected.runtime_code_hash,
             code.code,
             selected.bytecode_size,
@@ -445,6 +633,9 @@ def hydrate_and_write(
         FROM {tables['code']} AS code
         JOIN selected_contracts AS selected ON selected.runtime_code_hash = code.code_hash
         JOIN compilation_details AS details ON details.compilation_id = selected.compilation_id
+        JOIN contract_kinds AS kinds ON kinds.compilation_id = selected.compilation_id
+        WHERE kinds.contract_kind <> 'library'
+        ORDER BY selected.selection_order
         """
     )
     columns = [item[0] for item in result.description]
@@ -463,8 +654,13 @@ def hydrate_and_write(
                     "chainId": row["chain_id"],
                     "address": address,
                     "verifiedContractId": row["verified_contract_id"],
+                    "compilationId": row["compilation_id"],
                     "compiler": row["compiler"],
                     "compilerVersion": row["compiler_version"],
+                    "language": row["language"],
+                    "contractName": row["contract_name"],
+                    "fullyQualifiedName": row["fully_qualified_name"],
+                    "contractKind": row["contract_kind"],
                     "compilerSettings": json_value(row["compiler_settings"], {}),
                     "runtimeCodeHash": runtime_hash,
                     "bytecodeSize": row["bytecode_size"],
@@ -480,9 +676,14 @@ def hydrate_and_write(
                 json.dump(document, handle, separators=(",", ":"))
                 handle.write("\n")
             written += 1
+            if written == requested_count:
+                break
+        if written == requested_count:
+            break
+    connection.execute("DROP TABLE contract_kinds")
     connection.execute("DROP TABLE compilation_details")
     connection.execute("DROP TABLE selected_contracts")
-    return written
+    return written, kind_counts
 
 
 def main() -> int:
@@ -501,14 +702,15 @@ def main() -> int:
         connection.execute(f"SET memory_limit = {sql_string(args.memory_limit)}")
 
         selected, selected_columns, selection_stats = select_candidates(connection, args, tables)
+        reserve = max(250, math.ceil(args.count * 0.05))
         selected = deduplicate_rows(
             selected,
             selected_columns,
-            args.count,
+            args.count + reserve,
             args.allow_duplicates,
         )
         temporary = prepare_destination(args.output, args.overwrite)
-        written = hydrate_and_write(
+        written, kind_counts = hydrate_and_write(
             connection,
             tables,
             selected,
@@ -517,9 +719,8 @@ def main() -> int:
             args.write_batch_size,
             args.chain_id,
             args.include_storage_layout,
+            args.count,
         )
-        if written != len(selected):
-            raise RuntimeError(f"selected {len(selected)} contracts, but hydrated {written}")
         if args.output.exists():
             shutil.rmtree(args.output)
         os.replace(temporary, args.output)
@@ -532,6 +733,11 @@ def main() -> int:
         connection.close()
 
     print(f"Wrote {written} contracts to {args.output} (requested {args.count})", file=sys.stderr)
+    if kind_counts["library"]:
+        print(
+            f"Excluded {kind_counts['library']} source-classified Solidity libraries",
+            file=sys.stderr,
+        )
     if written < args.count:
         match_description = "runtime + metadata" if args.match == "exact" else "runtime"
         print("Selection summary:", file=sys.stderr)

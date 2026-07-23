@@ -21,6 +21,7 @@ class Candidate:
     address: str
     compiler: str
     compiler_version: str
+    contract_kind: str
     runtime_hash: str
     normalized_hash: str
     bytecode_size: int
@@ -175,6 +176,9 @@ def load_candidate(path: Path) -> Candidate:
     metadata = metadata if isinstance(metadata, dict) else {}
     compiler = str(metadata.get("compiler", "unknown")).lower()
     version = str(metadata.get("compilerVersion", "unknown"))
+    contract_kind = metadata.get("contractKind")
+    if contract_kind not in {"contract", "interface", "library"}:
+        raise ValueError("missing or invalid _meta.contractKind; regenerate with generate.py")
     address = str(metadata.get("address", path.stem))
     settings = metadata.get("compilerSettings")
     settings = settings if isinstance(settings, dict) else {}
@@ -183,6 +187,7 @@ def load_candidate(path: Path) -> Candidate:
 
     labels: set[str] = {
         f"compiler:{compiler}",
+        f"contract-kind:{contract_kind}",
         f"bytecode-size:{bucket(len(code), (127, 255, 511, 1023, 2047, 4095, 8191, 16383, 24575))}",
     }
     match = SEMVER_RE.match(version)
@@ -231,6 +236,7 @@ def load_candidate(path: Path) -> Candidate:
         address=address,
         compiler=compiler,
         compiler_version=version,
+        contract_kind=contract_kind,
         runtime_hash=runtime_hash,
         normalized_hash=normalized_hash,
         bytecode_size=len(code),

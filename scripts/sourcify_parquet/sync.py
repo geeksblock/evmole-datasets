@@ -23,7 +23,9 @@ from pathlib import Path
 EXPORT_URL = "https://export.sourcify.dev"
 DEFAULT_TABLES = (
     "code",
+    "sources",
     "contracts",
+    "compiled_contracts_sources",
     "contract_deployments",
     "compiled_contracts",
     "verified_contracts",
@@ -121,25 +123,27 @@ def write_manifest(
     cache: Path,
     base_url: str,
     listings: dict[str, list[RemoteObject]],
+    previous_manifest: dict[str, dict],
 ) -> None:
     path = manifest_path(cache)
     temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
-    objects = sorted(
-        (obj for listing in listings.values() for obj in listing),
-        key=lambda obj: obj.key,
-    )
+    refreshed_tables = set(listings)
+    objects = {
+        key: item
+        for key, item in previous_manifest.items()
+        if len(Path(key).parts) == 3 and Path(key).parts[1] not in refreshed_tables
+    }
+    for obj in (obj for listing in listings.values() for obj in listing):
+        objects[obj.key] = {
+            "key": obj.key,
+            "size": obj.size,
+            "etag": obj.etag,
+            "lastModified": obj.last_modified,
+        }
     document = {
         "formatVersion": 1,
         "baseUrl": base_url,
-        "objects": [
-            {
-                "key": obj.key,
-                "size": obj.size,
-                "etag": obj.etag,
-                "lastModified": obj.last_modified,
-            }
-            for obj in objects
-        ],
+        "objects": [objects[key] for key in sorted(objects)],
     }
     try:
         temporary.write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8")
@@ -232,7 +236,7 @@ def synchronize(args: argparse.Namespace) -> int:
                         path.unlink()
                         print(f"Removed {path}", file=sys.stderr)
 
-    write_manifest(args.cache, args.base_url.rstrip("/"), listings)
+    write_manifest(args.cache, args.base_url.rstrip("/"), listings, previous_manifest)
     print("Cache is up to date.", file=sys.stderr)
     return 0
 

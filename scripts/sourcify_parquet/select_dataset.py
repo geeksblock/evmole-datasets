@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import collections
 import json
 import os
 import shutil
@@ -27,6 +28,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", required=True)
     parser.add_argument("--coverage-target", type=int, default=30)
     parser.add_argument("--compiler", action="append", default=[], help="compiler filter; repeatable")
+    parser.add_argument(
+        "--exclude-contract-kind",
+        action="append",
+        default=[],
+        help="contract kind to exclude; repeatable",
+    )
     parser.add_argument(
         "--exclude-manifest",
         action="append",
@@ -56,6 +63,18 @@ def main() -> int:
     compiler_filter = {value.lower() for value in args.compiler}
     if compiler_filter:
         candidates = [candidate for candidate in candidates if candidate.compiler in compiler_filter]
+    excluded_contract_kinds = {value.lower() for value in args.exclude_contract_kind}
+    excluded_contract_kind_counts = collections.Counter(
+        candidate.contract_kind
+        for candidate in candidates
+        if candidate.contract_kind in excluded_contract_kinds
+    )
+    if excluded_contract_kinds:
+        candidates = [
+            candidate
+            for candidate in candidates
+            if candidate.contract_kind not in excluded_contract_kinds
+        ]
     excluded_hashes: set[str] = set()
     for path in args.exclude_manifest:
         document = json.loads(path.read_text(encoding="utf-8"))
@@ -115,6 +134,8 @@ def main() -> int:
         "requestedCount": args.count,
         "coverageTarget": args.coverage_target,
         "compilerFilter": sorted(compiler_filter),
+        "excludedContractKinds": sorted(excluded_contract_kinds),
+        "excludedContractKindCounts": dict(sorted(excluded_contract_kind_counts.items())),
         "excludeManifests": [str(path) for path in args.exclude_manifest],
         "excludedNormalizedHashes": len(excluded_hashes),
         "candidateInputs": [str(path) for path in args.input],
@@ -126,6 +147,7 @@ def main() -> int:
                 "address": candidate.address,
                 "compiler": candidate.compiler,
                 "compilerVersion": candidate.compiler_version,
+                "contractKind": candidate.contract_kind,
                 "runtimeCodeHash": candidate.runtime_hash,
                 "normalizedCodeHash": candidate.normalized_hash,
                 "bytecodeSize": candidate.bytecode_size,
