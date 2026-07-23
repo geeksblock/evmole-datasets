@@ -1,59 +1,59 @@
 # EVMole Datasets
 
-This repository contains smart contract datasets used for [EVMole benchmarks](https://github.com/cdump/evmole/tree/master/benchmark). The datasets include large Solidity contracts, randomly selected contracts, and Vyper contracts from the Ethereum mainnet.
+This repository contains smart contract datasets used for [EVMole benchmarks](https://github.com/cdump/evmole/tree/master/benchmark).
 
-## Dataset Construction Process
+## July 2026 refresh
 
-1. First, clone the source repository containing verified Ethereum smart contracts:
-```sh
-git clone https://github.com/tintinweb/smart-contract-sanctuary.git
-```
+The current datasets were generated on July 23, 2026 from Sourcify's v2
+Parquet export. They replace `largest1k`, `random50k`, `vyper`, and `storage3k`.
+The legacy archives and their Etherscan/Sourcify generation scripts were
+removed from the current tree; they remain available in the
+[last commit containing the legacy suite](https://github.com/cdump/evmole-datasets/tree/65fe45409ffa8e5c4b74c5a0620b30c896f09df9).
 
-2. Locate all Solidity contracts and record their sizes:
-```sh
-$ cd smart-contract-sanctuary/ethereum/contracts/mainnet/
+The new suite gives better benchmark coverage with substantially fewer
+contracts to process:
 
-# (contract_size_in_bytes) (contract_file_path)
-$ find ./ -name "*.sol" -printf "%s %p\n" > all.txt
-```
+- a 10,000-contract random Solidity baseline is kept separate from an
+  additional, non-overlapping 2,000-contract coverage set;
+- dedicated Vyper, storage-layout, and difficult control-flow datasets exercise
+  behavior that a single large random sample can underrepresent;
+- selection covers compiler generations, compiler settings, ABI shapes,
+  bytecode sizes, structural complexity, modern opcodes, and persistent and
+  transient storage layouts;
+- runtime bytecode is deduplicated after normalizing compiler metadata; and
+- every release includes the selected-contract manifests, coverage reports,
+  source-cache inventory, tool versions, generation-code hashes, and
+  deterministic archives.
 
-3. Extract approximately 1200 of the largest contracts by file size:
-```sh
-$ cat all.txt | sort -rn | head -n 1200 | cut -d'/' -f3 | cut -d'_' -f1 > top.txt
-```
+This makes the suite quicker to run than the old 50,000-contract random
+baseline while making rare and difficult bytecode features explicit and
+measurable.
 
-4. Select approximately 55,000 random contracts:
-```sh
-$ cat all.txt | cut -d'/' -f3 | cut -d'_' -f1 | sort -u | shuf | head -n 55000 > random.txt
-```
+## Current generation workflow
 
-5. Get all vyper contracts:
-```sh
-$ find ./ -type f -name '*.vy' | cut -d'/' -f3 | cut -d'_' -f1 > vyper.txt
-```
+New datasets should be generated from Sourcify's v2 Parquet export with
+[`scripts/sourcify_parquet/`](scripts/sourcify_parquet/). The profile-driven
+workflow creates a random Solidity baseline plus Solidity, Vyper, storage, and
+control-flow coverage datasets. It also produces selection manifests, coverage
+reports, a cache snapshot manifest, and deterministic archives.
 
-6. Download contracts code & abi (using scripts/etherscan):
-```sh
-$ poetry run python3 download.py --etherscan-api-key=CHANGE_ME --addrs-list=top.txt --out-dir=datasets/largest1k --limit=1000 --code-regexp='^0x(?!73).'
-$ poetry run python3 download.py --etherscan-api-key=CHANGE_ME --addrs-list=random.txt --out-dir=datasets/random50k --limit=50000 --code-regexp='^0x(?!73).'
-$ poetry run python3 download.py --etherscan-api-key=CHANGE_ME --addrs-list=vyper.txt --out-dir=datasets/vyper --code-regexp='^0x(?!73).'
-```
+See
+[`scripts/sourcify_parquet/README.md`](scripts/sourcify_parquet/README.md) for
+the complete reproducible procedure and release checklist.
 
-The `--code-regexp='^0x(?!73).'` parameter is used to filter contracts:
-1. It skips contracts with empty code (`{"code": "0x",`), which are self-destructed contracts
-2. It excludes contracts with code starting with `0x73` (the `PUSH20` opcode)
+## Current release
 
-Note about excluded contracts: Compiled Solidity libraries [begin with the PUSH20 opcode](https://docs.soliditylang.org/en/v0.8.23/contracts.html#call-protection-for-libraries) for call protection. These are currently excluded because [non-storage structs are referred to by their fully qualified name](https://docs.soliditylang.org/en/v0.8.23/contracts.html#function-signatures-and-selectors-in-libraries), which is not yet supported by our reference Etherscan extractor (`providers/etherscan`). This limitation may be addressed in future updates.
+The generated archives at the repository root are the
+[`sourcify-v1`](releases/sourcify-v1/) suite:
 
-7. Build the `storage` dataset (`/mnt/sourcify/sources` must contain the downloaded contracts):
-```sh
-$ cd scripts/sourcify
-$ npm install
-$ mkdir -p out/
+| Dataset | Contracts | Purpose |
+|---|---:|---|
+| `solidity-random10k` | 10,000 | Population-style Solidity baseline |
+| `solidity-coverage2k` | 2,000 | Additional, non-overlapping Solidity coverage |
+| `vyper-coverage1k` | 1,000 | Vyper compiler and bytecode coverage |
+| `storage-coverage1k` | 1,000 | Persistent and transient storage-layout coverage |
+| `flow-challenge500` | 500 | Difficult control-flow examples |
 
-# Process contracts in parallel (adjust -P16 for your CPU cores)
-$ find /mnt/sourcify/sources/contracts/full_match/1 -mindepth 1 -maxdepth 1 -type d | shuf | head -n 4000 | xargs -n1 -P16 node index.mjs
-
-# Select ~3000 unique contracts
-$ md5sum out/* | sort | uniq -w 32 | shuf | head -n 3000 | awk '{print $2}' | xargs -I{} cp {} storage3k/
-```
+The release directory contains its exact profile, selected-contract manifests,
+coverage reports, cache snapshot manifest, generation metadata, checksums, and
+validation record.
