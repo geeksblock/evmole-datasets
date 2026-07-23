@@ -5,6 +5,9 @@
   "match": "exact",
   "bytecodeSizeMax": 131072,
   "candidateFactor": 6,
+  "excludeContractKinds": [
+    "library"
+  ],
   "candidatePools": {
     "solc-main": {
       "compiler": "solc",

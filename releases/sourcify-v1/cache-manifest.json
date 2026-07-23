@@ -1873,6 +1873,3126 @@
       "mtimeNs": 1781871577674307676
     },
     {
+      "path": "sources/sources_0_10000.parquet",
+      "size": 26668630,
+      "mtimeNs": 1784808859566360024
+    },
+    {
+      "path": "sources/sources_1000000_1010000.parquet",
+      "size": 26209899,
+      "mtimeNs": 1784808862650360074
+    },
+    {
+      "path": "sources/sources_100000_110000.parquet",
+      "size": 25994049,
+      "mtimeNs": 1784808862659360074
+    },
+    {
+      "path": "sources/sources_10000_20000.parquet",
+      "size": 26345965,
+      "mtimeNs": 1784808858351360005
+    },
+    {
+      "path": "sources/sources_1010000_1020000.parquet",
+      "size": 26317028,
+      "mtimeNs": 1784808865236360116
+    },
+    {
+      "path": "sources/sources_1020000_1030000.parquet",
+      "size": 25957279,
+      "mtimeNs": 1784808877599360315
+    },
+    {
+      "path": "sources/sources_1030000_1040000.parquet",
+      "size": 25931130,
+      "mtimeNs": 1784808879406360344
+    },
+    {
+      "path": "sources/sources_1040000_1050000.parquet",
+      "size": 26206032,
+      "mtimeNs": 1784808872905360239
+    },
+    {
+      "path": "sources/sources_1050000_1060000.parquet",
+      "size": 26302540,
+      "mtimeNs": 1784808874449360264
+    },
+    {
+      "path": "sources/sources_1060000_1070000.parquet",
+      "size": 25534388,
+      "mtimeNs": 1784808878146360324
+    },
+    {
+      "path": "sources/sources_1070000_1080000.parquet",
+      "size": 26170478,
+      "mtimeNs": 1784808883927360417
+    },
+    {
+      "path": "sources/sources_1080000_1090000.parquet",
+      "size": 25867151,
+      "mtimeNs": 1784808885320360440
+    },
+    {
+      "path": "sources/sources_1090000_1100000.parquet",
+      "size": 25626233,
+      "mtimeNs": 1784808889082360500
+    },
+    {
+      "path": "sources/sources_1100000_1110000.parquet",
+      "size": 25581545,
+      "mtimeNs": 1784808888071360484
+    },
+    {
+      "path": "sources/sources_110000_120000.parquet",
+      "size": 25952400,
+      "mtimeNs": 1784809405580368830
+    },
+    {
+      "path": "sources/sources_1110000_1120000.parquet",
+      "size": 26099602,
+      "mtimeNs": 1784809397976368707
+    },
+    {
+      "path": "sources/sources_1120000_1130000.parquet",
+      "size": 25748619,
+      "mtimeNs": 1784809389125368564
+    },
+    {
+      "path": "sources/sources_1130000_1140000.parquet",
+      "size": 23052591,
+      "mtimeNs": 1784809397469368699
+    },
+    {
+      "path": "sources/sources_1140000_1150000.parquet",
+      "size": 22242980,
+      "mtimeNs": 1784809401201368759
+    },
+    {
+      "path": "sources/sources_1150000_1160000.parquet",
+      "size": 23915806,
+      "mtimeNs": 1784809411798368930
+    },
+    {
+      "path": "sources/sources_1160000_1170000.parquet",
+      "size": 22473098,
+      "mtimeNs": 1784809420532369071
+    },
+    {
+      "path": "sources/sources_1170000_1180000.parquet",
+      "size": 22316493,
+      "mtimeNs": 1784809402067368773
+    },
+    {
+      "path": "sources/sources_1180000_1190000.parquet",
+      "size": 23873344,
+      "mtimeNs": 1784809396363368681
+    },
+    {
+      "path": "sources/sources_1190000_1200000.parquet",
+      "size": 25668099,
+      "mtimeNs": 1784809425976369158
+    },
+    {
+      "path": "sources/sources_1200000_1210000.parquet",
+      "size": 23197395,
+      "mtimeNs": 1784809394458368650
+    },
+    {
+      "path": "sources/sources_120000_130000.parquet",
+      "size": 26134907,
+      "mtimeNs": 1784809416631369008
+    },
+    {
+      "path": "sources/sources_1210000_1220000.parquet",
+      "size": 23180096,
+      "mtimeNs": 1784809410617368911
+    },
+    {
+      "path": "sources/sources_1220000_1230000.parquet",
+      "size": 23788501,
+      "mtimeNs": 1784809390006368578
+    },
+    {
+      "path": "sources/sources_1230000_1240000.parquet",
+      "size": 24787940,
+      "mtimeNs": 1784809411003368917
+    },
+    {
+      "path": "sources/sources_1240000_1250000.parquet",
+      "size": 25348688,
+      "mtimeNs": 1784809412740368945
+    },
+    {
+      "path": "sources/sources_1250000_1260000.parquet",
+      "size": 25500790,
+      "mtimeNs": 1784809418098369031
+    },
+    {
+      "path": "sources/sources_1260000_1270000.parquet",
+      "size": 25046667,
+      "mtimeNs": 1784809434028369288
+    },
+    {
+      "path": "sources/sources_1270000_1280000.parquet",
+      "size": 26211080,
+      "mtimeNs": 1784809413183368952
+    },
+    {
+      "path": "sources/sources_1280000_1290000.parquet",
+      "size": 25152556,
+      "mtimeNs": 1784809436479369328
+    },
+    {
+      "path": "sources/sources_1290000_1300000.parquet",
+      "size": 26869988,
+      "mtimeNs": 1784809444935369464
+    },
+    {
+      "path": "sources/sources_1300000_1310000.parquet",
+      "size": 24847557,
+      "mtimeNs": 1784809431855369253
+    },
+    {
+      "path": "sources/sources_130000_140000.parquet",
+      "size": 26301076,
+      "mtimeNs": 1784809432568369265
+    },
+    {
+      "path": "sources/sources_1310000_1320000.parquet",
+      "size": 25694913,
+      "mtimeNs": 1784809435947369319
+    },
+    {
+      "path": "sources/sources_1320000_1330000.parquet",
+      "size": 26276876,
+      "mtimeNs": 1784809425693369154
+    },
+    {
+      "path": "sources/sources_1330000_1340000.parquet",
+      "size": 21767951,
+      "mtimeNs": 1784809458053369676
+    },
+    {
+      "path": "sources/sources_1340000_1350000.parquet",
+      "size": 23255329,
+      "mtimeNs": 1784809433017369272
+    },
+    {
+      "path": "sources/sources_1350000_1360000.parquet",
+      "size": 26372268,
+      "mtimeNs": 1784809462138369742
+    },
+    {
+      "path": "sources/sources_1360000_1370000.parquet",
+      "size": 23242474,
+      "mtimeNs": 1784809452958369594
+    },
+    {
+      "path": "sources/sources_1370000_1380000.parquet",
+      "size": 21624662,
+      "mtimeNs": 1784809471981369900
+    },
+    {
+      "path": "sources/sources_1380000_1390000.parquet",
+      "size": 21619754,
+      "mtimeNs": 1784809430869369237
+    },
+    {
+      "path": "sources/sources_1390000_1400000.parquet",
+      "size": 18860806,
+      "mtimeNs": 1784809446017369482
+    },
+    {
+      "path": "sources/sources_1400000_1410000.parquet",
+      "size": 21681521,
+      "mtimeNs": 1784809432596369265
+    },
+    {
+      "path": "sources/sources_140000_150000.parquet",
+      "size": 26281799,
+      "mtimeNs": 1784809491244370211
+    },
+    {
+      "path": "sources/sources_1410000_1420000.parquet",
+      "size": 21848320,
+      "mtimeNs": 1784809441875369415
+    },
+    {
+      "path": "sources/sources_1420000_1430000.parquet",
+      "size": 22325393,
+      "mtimeNs": 1784809461152369726
+    },
+    {
+      "path": "sources/sources_1430000_1440000.parquet",
+      "size": 26199372,
+      "mtimeNs": 1784809469556369861
+    },
+    {
+      "path": "sources/sources_1440000_1450000.parquet",
+      "size": 23493058,
+      "mtimeNs": 1784809489906370189
+    },
+    {
+      "path": "sources/sources_1450000_1460000.parquet",
+      "size": 21079574,
+      "mtimeNs": 1784809454656369621
+    },
+    {
+      "path": "sources/sources_1460000_1470000.parquet",
+      "size": 26274474,
+      "mtimeNs": 1784809471392369891
+    },
+    {
+      "path": "sources/sources_1470000_1480000.parquet",
+      "size": 24520294,
+      "mtimeNs": 1784809463050369756
+    },
+    {
+      "path": "sources/sources_1480000_1490000.parquet",
+      "size": 25718052,
+      "mtimeNs": 1784809485456370118
+    },
+    {
+      "path": "sources/sources_1490000_1500000.parquet",
+      "size": 26490350,
+      "mtimeNs": 1784809483551370087
+    },
+    {
+      "path": "sources/sources_1500000_1510000.parquet",
+      "size": 26819607,
+      "mtimeNs": 1784809464332369777
+    },
+    {
+      "path": "sources/sources_150000_160000.parquet",
+      "size": 25426801,
+      "mtimeNs": 1784809476288369970
+    },
+    {
+      "path": "sources/sources_1510000_1520000.parquet",
+      "size": 26000847,
+      "mtimeNs": 1784809461132369725
+    },
+    {
+      "path": "sources/sources_1520000_1530000.parquet",
+      "size": 27040697,
+      "mtimeNs": 1784809486392370133
+    },
+    {
+      "path": "sources/sources_1530000_1540000.parquet",
+      "size": 27457876,
+      "mtimeNs": 1784809492942370238
+    },
+    {
+      "path": "sources/sources_1540000_1550000.parquet",
+      "size": 26690946,
+      "mtimeNs": 1784809508663370492
+    },
+    {
+      "path": "sources/sources_1550000_1560000.parquet",
+      "size": 27162925,
+      "mtimeNs": 1784809507093370467
+    },
+    {
+      "path": "sources/sources_1560000_1570000.parquet",
+      "size": 26938093,
+      "mtimeNs": 1784809508641370492
+    },
+    {
+      "path": "sources/sources_1570000_1580000.parquet",
+      "size": 28101052,
+      "mtimeNs": 1784809488753370171
+    },
+    {
+      "path": "sources/sources_1580000_1590000.parquet",
+      "size": 27396413,
+      "mtimeNs": 1784809495079370273
+    },
+    {
+      "path": "sources/sources_1590000_1600000.parquet",
+      "size": 28288008,
+      "mtimeNs": 1784809480808370043
+    },
+    {
+      "path": "sources/sources_1600000_1610000.parquet",
+      "size": 27722847,
+      "mtimeNs": 1784809495912370286
+    },
+    {
+      "path": "sources/sources_160000_170000.parquet",
+      "size": 25760565,
+      "mtimeNs": 1784809920922377140
+    },
+    {
+      "path": "sources/sources_1610000_1620000.parquet",
+      "size": 27751146,
+      "mtimeNs": 1784809524519370748
+    },
+    {
+      "path": "sources/sources_1620000_1630000.parquet",
+      "size": 27542102,
+      "mtimeNs": 1784809501663370379
+    },
+    {
+      "path": "sources/sources_1630000_1640000.parquet",
+      "size": 21387831,
+      "mtimeNs": 1784809516764370623
+    },
+    {
+      "path": "sources/sources_1640000_1650000.parquet",
+      "size": 26130453,
+      "mtimeNs": 1784809512658370556
+    },
+    {
+      "path": "sources/sources_1650000_1660000.parquet",
+      "size": 29277635,
+      "mtimeNs": 1784809936571377393
+    },
+    {
+      "path": "sources/sources_1660000_1670000.parquet",
+      "size": 27063785,
+      "mtimeNs": 1784809511367370536
+    },
+    {
+      "path": "sources/sources_1670000_1680000.parquet",
+      "size": 28191173,
+      "mtimeNs": 1784809528012370804
+    },
+    {
+      "path": "sources/sources_1680000_1690000.parquet",
+      "size": 28093707,
+      "mtimeNs": 1784809516445370617
+    },
+    {
+      "path": "sources/sources_1690000_1700000.parquet",
+      "size": 27779675,
+      "mtimeNs": 1784809960563377780
+    },
+    {
+      "path": "sources/sources_1700000_1710000.parquet",
+      "size": 28061551,
+      "mtimeNs": 1784809532611370878
+    },
+    {
+      "path": "sources/sources_170000_180000.parquet",
+      "size": 26258633,
+      "mtimeNs": 1784809516447370617
+    },
+    {
+      "path": "sources/sources_1710000_1720000.parquet",
+      "size": 27313564,
+      "mtimeNs": 1784809537317370954
+    },
+    {
+      "path": "sources/sources_1720000_1730000.parquet",
+      "size": 26672995,
+      "mtimeNs": 1784809534453370908
+    },
+    {
+      "path": "sources/sources_1730000_1740000.parquet",
+      "size": 35888785,
+      "mtimeNs": 1784810038941379044
+    },
+    {
+      "path": "sources/sources_1740000_1750000.parquet",
+      "size": 44010826,
+      "mtimeNs": 1784810085610379796
+    },
+    {
+      "path": "sources/sources_1750000_1760000.parquet",
+      "size": 36476392,
+      "mtimeNs": 1784809972004377964
+    },
+    {
+      "path": "sources/sources_1760000_1770000.parquet",
+      "size": 40346397,
+      "mtimeNs": 1784810109870380187
+    },
+    {
+      "path": "sources/sources_1770000_1780000.parquet",
+      "size": 41229395,
+      "mtimeNs": 1784810012638378619
+    },
+    {
+      "path": "sources/sources_1780000_1790000.parquet",
+      "size": 35573057,
+      "mtimeNs": 1784809995093378336
+    },
+    {
+      "path": "sources/sources_1790000_1800000.parquet",
+      "size": 35625904,
+      "mtimeNs": 1784810024711378814
+    },
+    {
+      "path": "sources/sources_1800000_1810000.parquet",
+      "size": 35857435,
+      "mtimeNs": 1784810001384378438
+    },
+    {
+      "path": "sources/sources_180000_190000.parquet",
+      "size": 26174374,
+      "mtimeNs": 1784809954470377681
+    },
+    {
+      "path": "sources/sources_1810000_1820000.parquet",
+      "size": 35995934,
+      "mtimeNs": 1784809987790378219
+    },
+    {
+      "path": "sources/sources_1820000_1830000.parquet",
+      "size": 36119271,
+      "mtimeNs": 1784809987300378211
+    },
+    {
+      "path": "sources/sources_1830000_1840000.parquet",
+      "size": 36611219,
+      "mtimeNs": 1784810011177378596
+    },
+    {
+      "path": "sources/sources_1840000_1850000.parquet",
+      "size": 36269931,
+      "mtimeNs": 1784809944186377515
+    },
+    {
+      "path": "sources/sources_1850000_1860000.parquet",
+      "size": 36603708,
+      "mtimeNs": 1784810005297378501
+    },
+    {
+      "path": "sources/sources_1860000_1870000.parquet",
+      "size": 36312506,
+      "mtimeNs": 1784809994992378335
+    },
+    {
+      "path": "sources/sources_1870000_1880000.parquet",
+      "size": 36083491,
+      "mtimeNs": 1784809995933378350
+    },
+    {
+      "path": "sources/sources_1880000_1890000.parquet",
+      "size": 35689077,
+      "mtimeNs": 1784810002239378452
+    },
+    {
+      "path": "sources/sources_1890000_1900000.parquet",
+      "size": 36556210,
+      "mtimeNs": 1784809993144378305
+    },
+    {
+      "path": "sources/sources_1900000_1910000.parquet",
+      "size": 36076295,
+      "mtimeNs": 1784809971754377960
+    },
+    {
+      "path": "sources/sources_190000_200000.parquet",
+      "size": 25548039,
+      "mtimeNs": 1784809921534377150
+    },
+    {
+      "path": "sources/sources_1910000_1920000.parquet",
+      "size": 36652370,
+      "mtimeNs": 1784809985181378177
+    },
+    {
+      "path": "sources/sources_1920000_1930000.parquet",
+      "size": 36948781,
+      "mtimeNs": 1784809997072378368
+    },
+    {
+      "path": "sources/sources_1930000_1940000.parquet",
+      "size": 36642413,
+      "mtimeNs": 1784810026236378839
+    },
+    {
+      "path": "sources/sources_1940000_1950000.parquet",
+      "size": 36933685,
+      "mtimeNs": 1784810021293378759
+    },
+    {
+      "path": "sources/sources_1950000_1960000.parquet",
+      "size": 36795919,
+      "mtimeNs": 1784809985883378188
+    },
+    {
+      "path": "sources/sources_1960000_1970000.parquet",
+      "size": 37007821,
+      "mtimeNs": 1784810023232378790
+    },
+    {
+      "path": "sources/sources_1970000_1980000.parquet",
+      "size": 37244093,
+      "mtimeNs": 1784809962729377814
+    },
+    {
+      "path": "sources/sources_1980000_1990000.parquet",
+      "size": 37083866,
+      "mtimeNs": 1784809974008377996
+    },
+    {
+      "path": "sources/sources_1990000_2000000.parquet",
+      "size": 38386265,
+      "mtimeNs": 1784810023485378794
+    },
+    {
+      "path": "sources/sources_2000000_2010000.parquet",
+      "size": 41559876,
+      "mtimeNs": 1784810074974379625
+    },
+    {
+      "path": "sources/sources_200000_210000.parquet",
+      "size": 25790341,
+      "mtimeNs": 1784809951698377637
+    },
+    {
+      "path": "sources/sources_20000_30000.parquet",
+      "size": 25854809,
+      "mtimeNs": 1784809934961377367
+    },
+    {
+      "path": "sources/sources_2010000_2020000.parquet",
+      "size": 41666435,
+      "mtimeNs": 1784810043687379120
+    },
+    {
+      "path": "sources/sources_2020000_2030000.parquet",
+      "size": 43222482,
+      "mtimeNs": 1784810063602379441
+    },
+    {
+      "path": "sources/sources_2030000_2040000.parquet",
+      "size": 36450014,
+      "mtimeNs": 1784810062302379420
+    },
+    {
+      "path": "sources/sources_2040000_2050000.parquet",
+      "size": 41796640,
+      "mtimeNs": 1784810030665378910
+    },
+    {
+      "path": "sources/sources_2050000_2060000.parquet",
+      "size": 43953894,
+      "mtimeNs": 1784810042836379106
+    },
+    {
+      "path": "sources/sources_2060000_2070000.parquet",
+      "size": 44617810,
+      "mtimeNs": 1784810094164379934
+    },
+    {
+      "path": "sources/sources_2070000_2080000.parquet",
+      "size": 45448002,
+      "mtimeNs": 1784810104183380096
+    },
+    {
+      "path": "sources/sources_2080000_2090000.parquet",
+      "size": 45296800,
+      "mtimeNs": 1784810036187378999
+    },
+    {
+      "path": "sources/sources_2090000_2100000.parquet",
+      "size": 44860975,
+      "mtimeNs": 1784810056911379333
+    },
+    {
+      "path": "sources/sources_2100000_2110000.parquet",
+      "size": 45368613,
+      "mtimeNs": 1784810041071379078
+    },
+    {
+      "path": "sources/sources_210000_220000.parquet",
+      "size": 26131996,
+      "mtimeNs": 1784809911040376981
+    },
+    {
+      "path": "sources/sources_2110000_2120000.parquet",
+      "size": 45643998,
+      "mtimeNs": 1784810035124378982
+    },
+    {
+      "path": "sources/sources_2120000_2130000.parquet",
+      "size": 45664155,
+      "mtimeNs": 1784810100556380037
+    },
+    {
+      "path": "sources/sources_2130000_2140000.parquet",
+      "size": 46361547,
+      "mtimeNs": 1784810077174379660
+    },
+    {
+      "path": "sources/sources_2140000_2150000.parquet",
+      "size": 46239060,
+      "mtimeNs": 1784810075059379626
+    },
+    {
+      "path": "sources/sources_2150000_2160000.parquet",
+      "size": 45841147,
+      "mtimeNs": 1784810078704379685
+    },
+    {
+      "path": "sources/sources_2160000_2170000.parquet",
+      "size": 42093268,
+      "mtimeNs": 1784809984706378169
+    },
+    {
+      "path": "sources/sources_2170000_2180000.parquet",
+      "size": 29067610,
+      "mtimeNs": 1784809967731377895
+    },
+    {
+      "path": "sources/sources_2180000_2190000.parquet",
+      "size": 30300624,
+      "mtimeNs": 1784809949049377594
+    },
+    {
+      "path": "sources/sources_2190000_2200000.parquet",
+      "size": 41763624,
+      "mtimeNs": 1784810086477379810
+    },
+    {
+      "path": "sources/sources_2200000_2210000.parquet",
+      "size": 47501630,
+      "mtimeNs": 1784810043392379115
+    },
+    {
+      "path": "sources/sources_220000_230000.parquet",
+      "size": 26185321,
+      "mtimeNs": 1784809926481377230
+    },
+    {
+      "path": "sources/sources_2210000_2220000.parquet",
+      "size": 32661723,
+      "mtimeNs": 1784809967281377888
+    },
+    {
+      "path": "sources/sources_2220000_2230000.parquet",
+      "size": 34236915,
+      "mtimeNs": 1784810000988378431
+    },
+    {
+      "path": "sources/sources_2230000_2240000.parquet",
+      "size": 36957420,
+      "mtimeNs": 1784809958257377742
+    },
+    {
+      "path": "sources/sources_2240000_2250000.parquet",
+      "size": 39192680,
+      "mtimeNs": 1784809998897378398
+    },
+    {
+      "path": "sources/sources_2250000_2260000.parquet",
+      "size": 38355660,
+      "mtimeNs": 1784810030920378914
+    },
+    {
+      "path": "sources/sources_2260000_2270000.parquet",
+      "size": 40109898,
+      "mtimeNs": 1784810049088379207
+    },
+    {
+      "path": "sources/sources_2270000_2280000.parquet",
+      "size": 41408281,
+      "mtimeNs": 1784810055888379317
+    },
+    {
+      "path": "sources/sources_2280000_2290000.parquet",
+      "size": 41657564,
+      "mtimeNs": 1784810144060380739
+    },
+    {
+      "path": "sources/sources_2290000_2300000.parquet",
+      "size": 25845758,
+      "mtimeNs": 1784810051937379253
+    },
+    {
+      "path": "sources/sources_2300000_2310000.parquet",
+      "size": 19706229,
+      "mtimeNs": 1784810040383379067
+    },
+    {
+      "path": "sources/sources_230000_240000.parquet",
+      "size": 26283518,
+      "mtimeNs": 1784810072771379589
+    },
+    {
+      "path": "sources/sources_2310000_2320000.parquet",
+      "size": 21802680,
+      "mtimeNs": 1784810035574378989
+    },
+    {
+      "path": "sources/sources_2320000_2330000.parquet",
+      "size": 22078682,
+      "mtimeNs": 1784810037788379025
+    },
+    {
+      "path": "sources/sources_2330000_2340000.parquet",
+      "size": 22936931,
+      "mtimeNs": 1784810110461380197
+    },
+    {
+      "path": "sources/sources_2340000_2350000.parquet",
+      "size": 22970875,
+      "mtimeNs": 1784810077598379667
+    },
+    {
+      "path": "sources/sources_2350000_2360000.parquet",
+      "size": 22944747,
+      "mtimeNs": 1784810041156379079
+    },
+    {
+      "path": "sources/sources_2360000_2370000.parquet",
+      "size": 31616321,
+      "mtimeNs": 1784810145063380755
+    },
+    {
+      "path": "sources/sources_2370000_2380000.parquet",
+      "size": 19378719,
+      "mtimeNs": 1784810031739378927
+    },
+    {
+      "path": "sources/sources_2380000_2390000.parquet",
+      "size": 14735210,
+      "mtimeNs": 1784810044646379136
+    },
+    {
+      "path": "sources/sources_2390000_2400000.parquet",
+      "size": 31610054,
+      "mtimeNs": 1784810120545380360
+    },
+    {
+      "path": "sources/sources_2400000_2410000.parquet",
+      "size": 37018127,
+      "mtimeNs": 1784810183771381379
+    },
+    {
+      "path": "sources/sources_240000_250000.parquet",
+      "size": 26394246,
+      "mtimeNs": 1784810142388380712
+    },
+    {
+      "path": "sources/sources_2410000_2420000.parquet",
+      "size": 36706483,
+      "mtimeNs": 1784810183447381374
+    },
+    {
+      "path": "sources/sources_2420000_2430000.parquet",
+      "size": 37693694,
+      "mtimeNs": 1784810180041381319
+    },
+    {
+      "path": "sources/sources_2430000_2440000.parquet",
+      "size": 38085356,
+      "mtimeNs": 1784810199374381631
+    },
+    {
+      "path": "sources/sources_2440000_2450000.parquet",
+      "size": 36954509,
+      "mtimeNs": 1784810174557381231
+    },
+    {
+      "path": "sources/sources_2450000_2460000.parquet",
+      "size": 37928727,
+      "mtimeNs": 1784810237472382245
+    },
+    {
+      "path": "sources/sources_2460000_2470000.parquet",
+      "size": 30894876,
+      "mtimeNs": 1784810219210381951
+    },
+    {
+      "path": "sources/sources_2470000_2480000.parquet",
+      "size": 24438062,
+      "mtimeNs": 1784810182023381351
+    },
+    {
+      "path": "sources/sources_2480000_2490000.parquet",
+      "size": 21871662,
+      "mtimeNs": 1784810090028379867
+    },
+    {
+      "path": "sources/sources_2490000_2500000.parquet",
+      "size": 23377134,
+      "mtimeNs": 1784810089044379852
+    },
+    {
+      "path": "sources/sources_2500000_2510000.parquet",
+      "size": 26041783,
+      "mtimeNs": 1784810159231380983
+    },
+    {
+      "path": "sources/sources_250000_260000.parquet",
+      "size": 25984835,
+      "mtimeNs": 1784810137778380637
+    },
+    {
+      "path": "sources/sources_2510000_2520000.parquet",
+      "size": 20791832,
+      "mtimeNs": 1784810136744380621
+    },
+    {
+      "path": "sources/sources_2520000_2530000.parquet",
+      "size": 18379543,
+      "mtimeNs": 1784810136132380611
+    },
+    {
+      "path": "sources/sources_2530000_2540000.parquet",
+      "size": 17639211,
+      "mtimeNs": 1784810102932380075
+    },
+    {
+      "path": "sources/sources_2540000_2550000.parquet",
+      "size": 19613413,
+      "mtimeNs": 1784810091949379898
+    },
+    {
+      "path": "sources/sources_2550000_2560000.parquet",
+      "size": 21610013,
+      "mtimeNs": 1784810126549380456
+    },
+    {
+      "path": "sources/sources_2560000_2570000.parquet",
+      "size": 22185875,
+      "mtimeNs": 1784810084701379781
+    },
+    {
+      "path": "sources/sources_2570000_2580000.parquet",
+      "size": 21011966,
+      "mtimeNs": 1784810118414380325
+    },
+    {
+      "path": "sources/sources_2580000_2590000.parquet",
+      "size": 18450068,
+      "mtimeNs": 1784810110734380201
+    },
+    {
+      "path": "sources/sources_2590000_2600000.parquet",
+      "size": 16151658,
+      "mtimeNs": 1784810070457379552
+    },
+    {
+      "path": "sources/sources_2600000_2610000.parquet",
+      "size": 17534857,
+      "mtimeNs": 1784810088421379841
+    },
+    {
+      "path": "sources/sources_260000_270000.parquet",
+      "size": 26358811,
+      "mtimeNs": 1784810177430381277
+    },
+    {
+      "path": "sources/sources_2610000_2620000.parquet",
+      "size": 17975091,
+      "mtimeNs": 1784810129782380508
+    },
+    {
+      "path": "sources/sources_2620000_2630000.parquet",
+      "size": 19271501,
+      "mtimeNs": 1784810096519379972
+    },
+    {
+      "path": "sources/sources_2630000_2640000.parquet",
+      "size": 19100705,
+      "mtimeNs": 1784810154179380902
+    },
+    {
+      "path": "sources/sources_2640000_2650000.parquet",
+      "size": 20241502,
+      "mtimeNs": 1784810176392381260
+    },
+    {
+      "path": "sources/sources_2650000_2660000.parquet",
+      "size": 19599455,
+      "mtimeNs": 1784810132927380559
+    },
+    {
+      "path": "sources/sources_2660000_2670000.parquet",
+      "size": 22678467,
+      "mtimeNs": 1784810201613381667
+    },
+    {
+      "path": "sources/sources_2670000_2680000.parquet",
+      "size": 22284209,
+      "mtimeNs": 1784810158152380966
+    },
+    {
+      "path": "sources/sources_2680000_2690000.parquet",
+      "size": 15237211,
+      "mtimeNs": 1784810118411380325
+    },
+    {
+      "path": "sources/sources_2690000_2700000.parquet",
+      "size": 16143186,
+      "mtimeNs": 1784810118062380319
+    },
+    {
+      "path": "sources/sources_2700000_2710000.parquet",
+      "size": 15836778,
+      "mtimeNs": 1784810138077380642
+    },
+    {
+      "path": "sources/sources_270000_280000.parquet",
+      "size": 26173091,
+      "mtimeNs": 1784810219554381956
+    },
+    {
+      "path": "sources/sources_2710000_2720000.parquet",
+      "size": 16681406,
+      "mtimeNs": 1784810144956380753
+    },
+    {
+      "path": "sources/sources_2720000_2730000.parquet",
+      "size": 16478376,
+      "mtimeNs": 1784810153803380896
+    },
+    {
+      "path": "sources/sources_2730000_2740000.parquet",
+      "size": 16382081,
+      "mtimeNs": 1784810144970380753
+    },
+    {
+      "path": "sources/sources_2740000_2750000.parquet",
+      "size": 13924098,
+      "mtimeNs": 1784810104896380107
+    },
+    {
+      "path": "sources/sources_2750000_2760000.parquet",
+      "size": 19462533,
+      "mtimeNs": 1784810154956380914
+    },
+    {
+      "path": "sources/sources_2760000_2770000.parquet",
+      "size": 21326870,
+      "mtimeNs": 1784810129865380510
+    },
+    {
+      "path": "sources/sources_2770000_2780000.parquet",
+      "size": 17206558,
+      "mtimeNs": 1784810115197380273
+    },
+    {
+      "path": "sources/sources_2780000_2790000.parquet",
+      "size": 10930259,
+      "mtimeNs": 1784810063332379437
+    },
+    {
+      "path": "sources/sources_2790000_2800000.parquet",
+      "size": 6912157,
+      "mtimeNs": 1784810091725379895
+    },
+    {
+      "path": "sources/sources_2800000_2810000.parquet",
+      "size": 4700770,
+      "mtimeNs": 1784810060391379389
+    },
+    {
+      "path": "sources/sources_280000_290000.parquet",
+      "size": 25978427,
+      "mtimeNs": 1784810196379381582
+    },
+    {
+      "path": "sources/sources_2810000_2820000.parquet",
+      "size": 13428916,
+      "mtimeNs": 1784810127104380465
+    },
+    {
+      "path": "sources/sources_2820000_2830000.parquet",
+      "size": 25649238,
+      "mtimeNs": 1784810202610381683
+    },
+    {
+      "path": "sources/sources_2830000_2840000.parquet",
+      "size": 16742538,
+      "mtimeNs": 1784810110201380193
+    },
+    {
+      "path": "sources/sources_2840000_2850000.parquet",
+      "size": 12853897,
+      "mtimeNs": 1784810136103380610
+    },
+    {
+      "path": "sources/sources_2850000_2860000.parquet",
+      "size": 18813750,
+      "mtimeNs": 1784810187023381432
+    },
+    {
+      "path": "sources/sources_2860000_2870000.parquet",
+      "size": 19609410,
+      "mtimeNs": 1784810195663381571
+    },
+    {
+      "path": "sources/sources_2870000_2880000.parquet",
+      "size": 19315410,
+      "mtimeNs": 1784810179150381305
+    },
+    {
+      "path": "sources/sources_2880000_2890000.parquet",
+      "size": 22283573,
+      "mtimeNs": 1784810177145381272
+    },
+    {
+      "path": "sources/sources_2890000_2900000.parquet",
+      "size": 23840653,
+      "mtimeNs": 1784810195849381574
+    },
+    {
+      "path": "sources/sources_2900000_2910000.parquet",
+      "size": 22334067,
+      "mtimeNs": 1784810184779381395
+    },
+    {
+      "path": "sources/sources_290000_300000.parquet",
+      "size": 27132716,
+      "mtimeNs": 1784810265726382701
+    },
+    {
+      "path": "sources/sources_2910000_2920000.parquet",
+      "size": 21826504,
+      "mtimeNs": 1784810244448382358
+    },
+    {
+      "path": "sources/sources_2920000_2930000.parquet",
+      "size": 21064438,
+      "mtimeNs": 1784810181840381348
+    },
+    {
+      "path": "sources/sources_2930000_2940000.parquet",
+      "size": 19122115,
+      "mtimeNs": 1784810206572381747
+    },
+    {
+      "path": "sources/sources_2940000_2950000.parquet",
+      "size": 18066715,
+      "mtimeNs": 1784810158481380971
+    },
+    {
+      "path": "sources/sources_2950000_2960000.parquet",
+      "size": 23084331,
+      "mtimeNs": 1784810209179381789
+    },
+    {
+      "path": "sources/sources_2960000_2970000.parquet",
+      "size": 23141273,
+      "mtimeNs": 1784810206686381749
+    },
+    {
+      "path": "sources/sources_2970000_2980000.parquet",
+      "size": 24430639,
+      "mtimeNs": 1784810209659381797
+    },
+    {
+      "path": "sources/sources_2980000_2990000.parquet",
+      "size": 23333481,
+      "mtimeNs": 1784810200777381653
+    },
+    {
+      "path": "sources/sources_2990000_3000000.parquet",
+      "size": 25125256,
+      "mtimeNs": 1784810208581381779
+    },
+    {
+      "path": "sources/sources_3000000_3010000.parquet",
+      "size": 22542515,
+      "mtimeNs": 1784810210973381818
+    },
+    {
+      "path": "sources/sources_300000_310000.parquet",
+      "size": 25981085,
+      "mtimeNs": 1784810288384383066
+    },
+    {
+      "path": "sources/sources_30000_40000.parquet",
+      "size": 25713343,
+      "mtimeNs": 1784810251293382468
+    },
+    {
+      "path": "sources/sources_3010000_3020000.parquet",
+      "size": 24508860,
+      "mtimeNs": 1784810228256382097
+    },
+    {
+      "path": "sources/sources_3020000_3030000.parquet",
+      "size": 22044562,
+      "mtimeNs": 1784810210505381810
+    },
+    {
+      "path": "sources/sources_3030000_3040000.parquet",
+      "size": 15524057,
+      "mtimeNs": 1784810220905381978
+    },
+    {
+      "path": "sources/sources_3040000_3050000.parquet",
+      "size": 16973481,
+      "mtimeNs": 1784810173033381206
+    },
+    {
+      "path": "sources/sources_3050000_3060000.parquet",
+      "size": 25911112,
+      "mtimeNs": 1784810243859382348
+    },
+    {
+      "path": "sources/sources_3060000_3070000.parquet",
+      "size": 22294319,
+      "mtimeNs": 1784810233632382183
+    },
+    {
+      "path": "sources/sources_3070000_3080000.parquet",
+      "size": 19432140,
+      "mtimeNs": 1784810240208382289
+    },
+    {
+      "path": "sources/sources_3080000_3090000.parquet",
+      "size": 23438648,
+      "mtimeNs": 1784810255145382530
+    },
+    {
+      "path": "sources/sources_3090000_3100000.parquet",
+      "size": 22622502,
+      "mtimeNs": 1784810228667382103
+    },
+    {
+      "path": "sources/sources_3100000_3110000.parquet",
+      "size": 22119684,
+      "mtimeNs": 1784810254421382518
+    },
+    {
+      "path": "sources/sources_310000_320000.parquet",
+      "size": 26935499,
+      "mtimeNs": 1784810272874382816
+    },
+    {
+      "path": "sources/sources_3110000_3120000.parquet",
+      "size": 21591673,
+      "mtimeNs": 1784810250727382459
+    },
+    {
+      "path": "sources/sources_3120000_3130000.parquet",
+      "size": 18415054,
+      "mtimeNs": 1784810229368382114
+    },
+    {
+      "path": "sources/sources_3130000_3140000.parquet",
+      "size": 21425371,
+      "mtimeNs": 1784810296156383192
+    },
+    {
+      "path": "sources/sources_3140000_3150000.parquet",
+      "size": 21745958,
+      "mtimeNs": 1784810279239382919
+    },
+    {
+      "path": "sources/sources_3150000_3160000.parquet",
+      "size": 18407692,
+      "mtimeNs": 1784810223398382018
+    },
+    {
+      "path": "sources/sources_3160000_3170000.parquet",
+      "size": 24085911,
+      "mtimeNs": 1784810291340383114
+    },
+    {
+      "path": "sources/sources_3170000_3180000.parquet",
+      "size": 18338724,
+      "mtimeNs": 1784810197190381596
+    },
+    {
+      "path": "sources/sources_3180000_3190000.parquet",
+      "size": 16437312,
+      "mtimeNs": 1784810231577382150
+    },
+    {
+      "path": "sources/sources_3190000_3200000.parquet",
+      "size": 22301886,
+      "mtimeNs": 1784810287769383056
+    },
+    {
+      "path": "sources/sources_3200000_3210000.parquet",
+      "size": 18501111,
+      "mtimeNs": 1784810207539381762
+    },
+    {
+      "path": "sources/sources_320000_330000.parquet",
+      "size": 26427721,
+      "mtimeNs": 1784810287405383050
+    },
+    {
+      "path": "sources/sources_3210000_3220000.parquet",
+      "size": 15069498,
+      "mtimeNs": 1784810208829381783
+    },
+    {
+      "path": "sources/sources_3220000_3230000.parquet",
+      "size": 15323258,
+      "mtimeNs": 1784810239605382280
+    },
+    {
+      "path": "sources/sources_3230000_3240000.parquet",
+      "size": 12305398,
+      "mtimeNs": 1784810223021382012
+    },
+    {
+      "path": "sources/sources_3240000_3250000.parquet",
+      "size": 11971551,
+      "mtimeNs": 1784810155578380924
+    },
+    {
+      "path": "sources/sources_3250000_3260000.parquet",
+      "size": 15468807,
+      "mtimeNs": 1784810233988382189
+    },
+    {
+      "path": "sources/sources_3260000_3270000.parquet",
+      "size": 10616285,
+      "mtimeNs": 1784810174291381226
+    },
+    {
+      "path": "sources/sources_3270000_3280000.parquet",
+      "size": 20104256,
+      "mtimeNs": 1784810236886382236
+    },
+    {
+      "path": "sources/sources_3280000_3290000.parquet",
+      "size": 14486588,
+      "mtimeNs": 1784810258012382576
+    },
+    {
+      "path": "sources/sources_3290000_3300000.parquet",
+      "size": 17386012,
+      "mtimeNs": 1784810255124382530
+    },
+    {
+      "path": "sources/sources_3300000_3310000.parquet",
+      "size": 14998166,
+      "mtimeNs": 1784810258444382583
+    },
+    {
+      "path": "sources/sources_330000_340000.parquet",
+      "size": 25906914,
+      "mtimeNs": 1784810329567383730
+    },
+    {
+      "path": "sources/sources_3310000_3320000.parquet",
+      "size": 17273964,
+      "mtimeNs": 1784810234792382202
+    },
+    {
+      "path": "sources/sources_3320000_3330000.parquet",
+      "size": 14792600,
+      "mtimeNs": 1784810233855382187
+    },
+    {
+      "path": "sources/sources_3330000_3340000.parquet",
+      "size": 15126957,
+      "mtimeNs": 1784810254228382515
+    },
+    {
+      "path": "sources/sources_3340000_3350000.parquet",
+      "size": 16531931,
+      "mtimeNs": 1784810244259382355
+    },
+    {
+      "path": "sources/sources_3350000_3360000.parquet",
+      "size": 16096249,
+      "mtimeNs": 1784810279555382924
+    },
+    {
+      "path": "sources/sources_3360000_3370000.parquet",
+      "size": 14239109,
+      "mtimeNs": 1784810249363382437
+    },
+    {
+      "path": "sources/sources_3370000_3380000.parquet",
+      "size": 18499115,
+      "mtimeNs": 1784811486606402389
+    },
+    {
+      "path": "sources/sources_3380000_3390000.parquet",
+      "size": 13926327,
+      "mtimeNs": 1784810288643383070
+    },
+    {
+      "path": "sources/sources_3390000_3400000.parquet",
+      "size": 14308458,
+      "mtimeNs": 1784810229530382117
+    },
+    {
+      "path": "sources/sources_3400000_3410000.parquet",
+      "size": 14973097,
+      "mtimeNs": 1784810280127382933
+    },
+    {
+      "path": "sources/sources_340000_350000.parquet",
+      "size": 26224527,
+      "mtimeNs": 1784810342760383943
+    },
+    {
+      "path": "sources/sources_3410000_3420000.parquet",
+      "size": 16409171,
+      "mtimeNs": 1784810245292382371
+    },
+    {
+      "path": "sources/sources_3420000_3430000.parquet",
+      "size": 18719021,
+      "mtimeNs": 1784810274325382839
+    },
+    {
+      "path": "sources/sources_3430000_3440000.parquet",
+      "size": 22897162,
+      "mtimeNs": 1784810302968383301
+    },
+    {
+      "path": "sources/sources_3440000_3450000.parquet",
+      "size": 15503011,
+      "mtimeNs": 1784810259878382606
+    },
+    {
+      "path": "sources/sources_3450000_3460000.parquet",
+      "size": 12814591,
+      "mtimeNs": 1784810279070382916
+    },
+    {
+      "path": "sources/sources_3460000_3470000.parquet",
+      "size": 13652179,
+      "mtimeNs": 1784810285087383013
+    },
+    {
+      "path": "sources/sources_3470000_3480000.parquet",
+      "size": 15765453,
+      "mtimeNs": 1784810286785383040
+    },
+    {
+      "path": "sources/sources_3480000_3490000.parquet",
+      "size": 20287667,
+      "mtimeNs": 1784810291732383120
+    },
+    {
+      "path": "sources/sources_3490000_3500000.parquet",
+      "size": 26458173,
+      "mtimeNs": 1784810382979384592
+    },
+    {
+      "path": "sources/sources_3500000_3510000.parquet",
+      "size": 27414189,
+      "mtimeNs": 1784810305553383343
+    },
+    {
+      "path": "sources/sources_350000_360000.parquet",
+      "size": 26531332,
+      "mtimeNs": 1784810310198383418
+    },
+    {
+      "path": "sources/sources_3510000_3520000.parquet",
+      "size": 27658444,
+      "mtimeNs": 1784810393783384766
+    },
+    {
+      "path": "sources/sources_3520000_3530000.parquet",
+      "size": 28216770,
+      "mtimeNs": 1784810355889384155
+    },
+    {
+      "path": "sources/sources_3530000_3540000.parquet",
+      "size": 28888940,
+      "mtimeNs": 1784810361704384249
+    },
+    {
+      "path": "sources/sources_3540000_3550000.parquet",
+      "size": 29045515,
+      "mtimeNs": 1784810359777384218
+    },
+    {
+      "path": "sources/sources_3550000_3560000.parquet",
+      "size": 28847415,
+      "mtimeNs": 1784810377636384506
+    },
+    {
+      "path": "sources/sources_3560000_3570000.parquet",
+      "size": 28756670,
+      "mtimeNs": 1784810391409384728
+    },
+    {
+      "path": "sources/sources_3570000_3580000.parquet",
+      "size": 30068205,
+      "mtimeNs": 1784810391391384727
+    },
+    {
+      "path": "sources/sources_3580000_3590000.parquet",
+      "size": 28737913,
+      "mtimeNs": 1784810391115384723
+    },
+    {
+      "path": "sources/sources_3590000_3600000.parquet",
+      "size": 28597855,
+      "mtimeNs": 1784810379861384541
+    },
+    {
+      "path": "sources/sources_3600000_3610000.parquet",
+      "size": 28800335,
+      "mtimeNs": 1784810360178384224
+    },
+    {
+      "path": "sources/sources_360000_370000.parquet",
+      "size": 25963897,
+      "mtimeNs": 1784810398302384839
+    },
+    {
+      "path": "sources/sources_3610000_3620000.parquet",
+      "size": 29958273,
+      "mtimeNs": 1784810421993385221
+    },
+    {
+      "path": "sources/sources_3620000_3630000.parquet",
+      "size": 29309305,
+      "mtimeNs": 1784810381256384564
+    },
+    {
+      "path": "sources/sources_3630000_3640000.parquet",
+      "size": 29613923,
+      "mtimeNs": 1784810382676384587
+    },
+    {
+      "path": "sources/sources_3640000_3650000.parquet",
+      "size": 29862879,
+      "mtimeNs": 1784810401044384883
+    },
+    {
+      "path": "sources/sources_3650000_3660000.parquet",
+      "size": 29886948,
+      "mtimeNs": 1784810428963385333
+    },
+    {
+      "path": "sources/sources_3660000_3670000.parquet",
+      "size": 29546256,
+      "mtimeNs": 1784810379729384539
+    },
+    {
+      "path": "sources/sources_3670000_3680000.parquet",
+      "size": 29817690,
+      "mtimeNs": 1784810397589384827
+    },
+    {
+      "path": "sources/sources_3680000_3690000.parquet",
+      "size": 30081207,
+      "mtimeNs": 1784810435166385433
+    },
+    {
+      "path": "sources/sources_3690000_3700000.parquet",
+      "size": 29709856,
+      "mtimeNs": 1784810418003385157
+    },
+    {
+      "path": "sources/sources_3700000_3710000.parquet",
+      "size": 29743925,
+      "mtimeNs": 1784810379289384532
+    },
+    {
+      "path": "sources/sources_370000_380000.parquet",
+      "size": 26759648,
+      "mtimeNs": 1784810391558384730
+    },
+    {
+      "path": "sources/sources_3710000_3720000.parquet",
+      "size": 29801854,
+      "mtimeNs": 1784810401886384897
+    },
+    {
+      "path": "sources/sources_3720000_3730000.parquet",
+      "size": 30140569,
+      "mtimeNs": 1784810415536385117
+    },
+    {
+      "path": "sources/sources_3730000_3740000.parquet",
+      "size": 29932184,
+      "mtimeNs": 1784810408378385001
+    },
+    {
+      "path": "sources/sources_3740000_3750000.parquet",
+      "size": 29935519,
+      "mtimeNs": 1784810435490385439
+    },
+    {
+      "path": "sources/sources_3750000_3760000.parquet",
+      "size": 31373677,
+      "mtimeNs": 1784810408911385010
+    },
+    {
+      "path": "sources/sources_3760000_3770000.parquet",
+      "size": 30332359,
+      "mtimeNs": 1784810374483384455
+    },
+    {
+      "path": "sources/sources_3770000_3780000.parquet",
+      "size": 30229201,
+      "mtimeNs": 1784810397464384825
+    },
+    {
+      "path": "sources/sources_3780000_3790000.parquet",
+      "size": 30448473,
+      "mtimeNs": 1784810438039385480
+    },
+    {
+      "path": "sources/sources_3790000_3800000.parquet",
+      "size": 24791798,
+      "mtimeNs": 1784810373960384446
+    },
+    {
+      "path": "sources/sources_3800000_3810000.parquet",
+      "size": 28905274,
+      "mtimeNs": 1784810436747385459
+    },
+    {
+      "path": "sources/sources_380000_390000.parquet",
+      "size": 26231533,
+      "mtimeNs": 1784810412341385065
+    },
+    {
+      "path": "sources/sources_3810000_3820000.parquet",
+      "size": 30600706,
+      "mtimeNs": 1784810453249385725
+    },
+    {
+      "path": "sources/sources_3820000_3830000.parquet",
+      "size": 30718924,
+      "mtimeNs": 1784810460689385845
+    },
+    {
+      "path": "sources/sources_3830000_3840000.parquet",
+      "size": 30905639,
+      "mtimeNs": 1784810407679384990
+    },
+    {
+      "path": "sources/sources_3840000_3850000.parquet",
+      "size": 30847715,
+      "mtimeNs": 1784810459309385823
+    },
+    {
+      "path": "sources/sources_3850000_3860000.parquet",
+      "size": 30466136,
+      "mtimeNs": 1784810419068385174
+    },
+    {
+      "path": "sources/sources_3860000_3870000.parquet",
+      "size": 30822271,
+      "mtimeNs": 1784810458013385802
+    },
+    {
+      "path": "sources/sources_3870000_3880000.parquet",
+      "size": 30812781,
+      "mtimeNs": 1784810394029384770
+    },
+    {
+      "path": "sources/sources_3880000_3890000.parquet",
+      "size": 30976484,
+      "mtimeNs": 1784810391200384724
+    },
+    {
+      "path": "sources/sources_3890000_3900000.parquet",
+      "size": 30448780,
+      "mtimeNs": 1784810466336385936
+    },
+    {
+      "path": "sources/sources_3900000_3910000.parquet",
+      "size": 30518945,
+      "mtimeNs": 1784810480767386169
+    },
+    {
+      "path": "sources/sources_390000_400000.parquet",
+      "size": 26548199,
+      "mtimeNs": 1784810428944385333
+    },
+    {
+      "path": "sources/sources_3910000_3920000.parquet",
+      "size": 30917225,
+      "mtimeNs": 1784810431782385379
+    },
+    {
+      "path": "sources/sources_3920000_3930000.parquet",
+      "size": 31334044,
+      "mtimeNs": 1784810494502386390
+    },
+    {
+      "path": "sources/sources_3930000_3940000.parquet",
+      "size": 31455911,
+      "mtimeNs": 1784810456880385783
+    },
+    {
+      "path": "sources/sources_3940000_3950000.parquet",
+      "size": 30478384,
+      "mtimeNs": 1784810504186386546
+    },
+    {
+      "path": "sources/sources_3950000_3960000.parquet",
+      "size": 30714623,
+      "mtimeNs": 1784810442260385548
+    },
+    {
+      "path": "sources/sources_3960000_3970000.parquet",
+      "size": 30605891,
+      "mtimeNs": 1784810421924385220
+    },
+    {
+      "path": "sources/sources_3970000_3980000.parquet",
+      "size": 30257580,
+      "mtimeNs": 1784810427282385306
+    },
+    {
+      "path": "sources/sources_3980000_3990000.parquet",
+      "size": 30874984,
+      "mtimeNs": 1784810457199385789
+    },
+    {
+      "path": "sources/sources_3990000_4000000.parquet",
+      "size": 30583240,
+      "mtimeNs": 1784810478740386136
+    },
+    {
+      "path": "sources/sources_4000000_4010000.parquet",
+      "size": 30245448,
+      "mtimeNs": 1784810475214386079
+    },
+    {
+      "path": "sources/sources_400000_410000.parquet",
+      "size": 26047741,
+      "mtimeNs": 1784810408206384999
+    },
+    {
+      "path": "sources/sources_40000_50000.parquet",
+      "size": 26251983,
+      "mtimeNs": 1784810419960385188
+    },
+    {
+      "path": "sources/sources_4010000_4020000.parquet",
+      "size": 30558453,
+      "mtimeNs": 1784810502956386527
+    },
+    {
+      "path": "sources/sources_4020000_4030000.parquet",
+      "size": 31371327,
+      "mtimeNs": 1784810422833385234
+    },
+    {
+      "path": "sources/sources_4030000_4040000.parquet",
+      "size": 30575533,
+      "mtimeNs": 1784810429512385342
+    },
+    {
+      "path": "sources/sources_4040000_4050000.parquet",
+      "size": 27370531,
+      "mtimeNs": 1784810453021385721
+    },
+    {
+      "path": "sources/sources_4050000_4060000.parquet",
+      "size": 20196758,
+      "mtimeNs": 1784810410166385030
+    },
+    {
+      "path": "sources/sources_4060000_4070000.parquet",
+      "size": 30708698,
+      "mtimeNs": 1784810479177386143
+    },
+    {
+      "path": "sources/sources_4070000_4080000.parquet",
+      "size": 30719049,
+      "mtimeNs": 1784810450652385683
+    },
+    {
+      "path": "sources/sources_4080000_4090000.parquet",
+      "size": 30441528,
+      "mtimeNs": 1784810491194386337
+    },
+    {
+      "path": "sources/sources_4090000_4100000.parquet",
+      "size": 31064960,
+      "mtimeNs": 1784810541658387151
+    },
+    {
+      "path": "sources/sources_4100000_4110000.parquet",
+      "size": 30829049,
+      "mtimeNs": 1784810542007387156
+    },
+    {
+      "path": "sources/sources_410000_420000.parquet",
+      "size": 26552850,
+      "mtimeNs": 1784810514258386709
+    },
+    {
+      "path": "sources/sources_4110000_4120000.parquet",
+      "size": 31909963,
+      "mtimeNs": 1784810570918387623
+    },
+    {
+      "path": "sources/sources_4120000_4130000.parquet",
+      "size": 30389189,
+      "mtimeNs": 1784810522213386837
+    },
+    {
+      "path": "sources/sources_4130000_4140000.parquet",
+      "size": 30876006,
+      "mtimeNs": 1784810569221387595
+    },
+    {
+      "path": "sources/sources_4140000_4150000.parquet",
+      "size": 30842760,
+      "mtimeNs": 1784810561479387470
+    },
+    {
+      "path": "sources/sources_4150000_4160000.parquet",
+      "size": 30948813,
+      "mtimeNs": 1784810542347387162
+    },
+    {
+      "path": "sources/sources_4160000_4170000.parquet",
+      "size": 30548410,
+      "mtimeNs": 1784810571589387633
+    },
+    {
+      "path": "sources/sources_4170000_4180000.parquet",
+      "size": 31181419,
+      "mtimeNs": 1784810554060387351
+    },
+    {
+      "path": "sources/sources_4180000_4190000.parquet",
+      "size": 30568486,
+      "mtimeNs": 1784810545437387212
+    },
+    {
+      "path": "sources/sources_4190000_4200000.parquet",
+      "size": 31381791,
+      "mtimeNs": 1784810588668387909
+    },
+    {
+      "path": "sources/sources_4200000_4210000.parquet",
+      "size": 31506530,
+      "mtimeNs": 1784810614613388327
+    },
+    {
+      "path": "sources/sources_420000_430000.parquet",
+      "size": 26098717,
+      "mtimeNs": 1784810571230387628
+    },
+    {
+      "path": "sources/sources_4210000_4220000.parquet",
+      "size": 30749578,
+      "mtimeNs": 1784810568809387589
+    },
+    {
+      "path": "sources/sources_4220000_4230000.parquet",
+      "size": 30790731,
+      "mtimeNs": 1784810614697388329
+    },
+    {
+      "path": "sources/sources_4230000_4240000.parquet",
+      "size": 31311183,
+      "mtimeNs": 1784810546943387236
+    },
+    {
+      "path": "sources/sources_4240000_4250000.parquet",
+      "size": 31405215,
+      "mtimeNs": 1784810576289387709
+    },
+    {
+      "path": "sources/sources_4250000_4260000.parquet",
+      "size": 31006940,
+      "mtimeNs": 1784810562756387491
+    },
+    {
+      "path": "sources/sources_4260000_4270000.parquet",
+      "size": 30459797,
+      "mtimeNs": 1784810612203388288
+    },
+    {
+      "path": "sources/sources_4270000_4280000.parquet",
+      "size": 31264469,
+      "mtimeNs": 1784810569235387595
+    },
+    {
+      "path": "sources/sources_4280000_4290000.parquet",
+      "size": 23819170,
+      "mtimeNs": 1784810535798387056
+    },
+    {
+      "path": "sources/sources_4290000_4300000.parquet",
+      "size": 22233811,
+      "mtimeNs": 1784810481415386179
+    },
+    {
+      "path": "sources/sources_4300000_4310000.parquet",
+      "size": 29444756,
+      "mtimeNs": 1784810552604387327
+    },
+    {
+      "path": "sources/sources_430000_440000.parquet",
+      "size": 26263504,
+      "mtimeNs": 1784810555550387375
+    },
+    {
+      "path": "sources/sources_4310000_4320000.parquet",
+      "size": 31329708,
+      "mtimeNs": 1784810556462387389
+    },
+    {
+      "path": "sources/sources_4320000_4330000.parquet",
+      "size": 31061447,
+      "mtimeNs": 1784810576103387706
+    },
+    {
+      "path": "sources/sources_4330000_4340000.parquet",
+      "size": 31490350,
+      "mtimeNs": 1784810631260388596
+    },
+    {
+      "path": "sources/sources_4340000_4350000.parquet",
+      "size": 31256339,
+      "mtimeNs": 1784810631659388602
+    },
+    {
+      "path": "sources/sources_4350000_4360000.parquet",
+      "size": 31474411,
+      "mtimeNs": 1784810566637387553
+    },
+    {
+      "path": "sources/sources_4360000_4370000.parquet",
+      "size": 31392697,
+      "mtimeNs": 1784810600784388104
+    },
+    {
+      "path": "sources/sources_4370000_4380000.parquet",
+      "size": 30484124,
+      "mtimeNs": 1784810616203388353
+    },
+    {
+      "path": "sources/sources_4380000_4390000.parquet",
+      "size": 31073128,
+      "mtimeNs": 1784810655793388991
+    },
+    {
+      "path": "sources/sources_4390000_4400000.parquet",
+      "size": 31566884,
+      "mtimeNs": 1784810632694388619
+    },
+    {
+      "path": "sources/sources_4400000_4410000.parquet",
+      "size": 30544308,
+      "mtimeNs": 1784810618402388388
+    },
+    {
+      "path": "sources/sources_440000_450000.parquet",
+      "size": 25589488,
+      "mtimeNs": 1784810571408387630
+    },
+    {
+      "path": "sources/sources_4410000_4420000.parquet",
+      "size": 31115612,
+      "mtimeNs": 1784810545095387206
+    },
+    {
+      "path": "sources/sources_4420000_4430000.parquet",
+      "size": 30678187,
+      "mtimeNs": 1784810626714388522
+    },
+    {
+      "path": "sources/sources_4430000_4440000.parquet",
+      "size": 30777924,
+      "mtimeNs": 1784810588576387907
+    },
+    {
+      "path": "sources/sources_4440000_4450000.parquet",
+      "size": 30583887,
+      "mtimeNs": 1784810604589388166
+    },
+    {
+      "path": "sources/sources_4450000_4460000.parquet",
+      "size": 30959019,
+      "mtimeNs": 1784810585574387859
+    },
+    {
+      "path": "sources/sources_4460000_4470000.parquet",
+      "size": 31499299,
+      "mtimeNs": 1784810599855388089
+    },
+    {
+      "path": "sources/sources_4470000_4480000.parquet",
+      "size": 30798148,
+      "mtimeNs": 1784810632565388617
+    },
+    {
+      "path": "sources/sources_4480000_4490000.parquet",
+      "size": 31322331,
+      "mtimeNs": 1784810610024388253
+    },
+    {
+      "path": "sources/sources_4490000_4500000.parquet",
+      "size": 31084714,
+      "mtimeNs": 1784810604144388158
+    },
+    {
+      "path": "sources/sources_4500000_4510000.parquet",
+      "size": 31385906,
+      "mtimeNs": 1784810598788388072
+    },
+    {
+      "path": "sources/sources_450000_460000.parquet",
+      "size": 26109078,
+      "mtimeNs": 1784810639455388728
+    },
+    {
+      "path": "sources/sources_4510000_4520000.parquet",
+      "size": 30562247,
+      "mtimeNs": 1784810603188388143
+    },
+    {
+      "path": "sources/sources_4520000_4530000.parquet",
+      "size": 30955820,
+      "mtimeNs": 1784810631819388605
+    },
+    {
+      "path": "sources/sources_4530000_4540000.parquet",
+      "size": 30654900,
+      "mtimeNs": 1784810590861387944
+    },
+    {
+      "path": "sources/sources_4540000_4550000.parquet",
+      "size": 30640654,
+      "mtimeNs": 1784810640954388752
+    },
+    {
+      "path": "sources/sources_4550000_4560000.parquet",
+      "size": 30463532,
+      "mtimeNs": 1784810608833388234
+    },
+    {
+      "path": "sources/sources_4560000_4570000.parquet",
+      "size": 31737761,
+      "mtimeNs": 1784810623228388466
+    },
+    {
+      "path": "sources/sources_4570000_4580000.parquet",
+      "size": 30680306,
+      "mtimeNs": 1784810662627389101
+    },
+    {
+      "path": "sources/sources_4580000_4590000.parquet",
+      "size": 30932423,
+      "mtimeNs": 1784810631991388607
+    },
+    {
+      "path": "sources/sources_4590000_4600000.parquet",
+      "size": 31317116,
+      "mtimeNs": 1784810586566387875
+    },
+    {
+      "path": "sources/sources_4600000_4610000.parquet",
+      "size": 30886571,
+      "mtimeNs": 1784810580746387781
+    },
+    {
+      "path": "sources/sources_460000_470000.parquet",
+      "size": 26787858,
+      "mtimeNs": 1784810620462388421
+    },
+    {
+      "path": "sources/sources_4610000_4620000.parquet",
+      "size": 31757756,
+      "mtimeNs": 1784810669442389211
+    },
+    {
+      "path": "sources/sources_4620000_4630000.parquet",
+      "size": 30641532,
+      "mtimeNs": 1784810643786388798
+    },
+    {
+      "path": "sources/sources_4630000_4640000.parquet",
+      "size": 30900262,
+      "mtimeNs": 1784810666485389164
+    },
+    {
+      "path": "sources/sources_4640000_4650000.parquet",
+      "size": 30746766,
+      "mtimeNs": 1784810640075388738
+    },
+    {
+      "path": "sources/sources_4650000_4660000.parquet",
+      "size": 30918434,
+      "mtimeNs": 1784810681797389411
+    },
+    {
+      "path": "sources/sources_4660000_4670000.parquet",
+      "size": 30849454,
+      "mtimeNs": 1784810671567389246
+    },
+    {
+      "path": "sources/sources_4670000_4680000.parquet",
+      "size": 31260674,
+      "mtimeNs": 1784810674855389299
+    },
+    {
+      "path": "sources/sources_4680000_4690000.parquet",
+      "size": 30928987,
+      "mtimeNs": 1784810672602389262
+    },
+    {
+      "path": "sources/sources_4690000_4700000.parquet",
+      "size": 31025478,
+      "mtimeNs": 1784810645623388827
+    },
+    {
+      "path": "sources/sources_4700000_4710000.parquet",
+      "size": 30828027,
+      "mtimeNs": 1784810716025389963
+    },
+    {
+      "path": "sources/sources_470000_480000.parquet",
+      "size": 26418031,
+      "mtimeNs": 1784810668173389191
+    },
+    {
+      "path": "sources/sources_4710000_4720000.parquet",
+      "size": 30750755,
+      "mtimeNs": 1784810727379390146
+    },
+    {
+      "path": "sources/sources_4720000_4730000.parquet",
+      "size": 31480852,
+      "mtimeNs": 1784810730609390198
+    },
+    {
+      "path": "sources/sources_4730000_4740000.parquet",
+      "size": 30855121,
+      "mtimeNs": 1784810698307389677
+    },
+    {
+      "path": "sources/sources_4740000_4750000.parquet",
+      "size": 31630328,
+      "mtimeNs": 1784810710085389867
+    },
+    {
+      "path": "sources/sources_4750000_4760000.parquet",
+      "size": 30359301,
+      "mtimeNs": 1784810697243389660
+    },
+    {
+      "path": "sources/sources_4760000_4770000.parquet",
+      "size": 31241466,
+      "mtimeNs": 1784810758237390643
+    },
+    {
+      "path": "sources/sources_4770000_4780000.parquet",
+      "size": 32046904,
+      "mtimeNs": 1784810742454390389
+    },
+    {
+      "path": "sources/sources_4780000_4790000.parquet",
+      "size": 30544297,
+      "mtimeNs": 1784810714695389941
+    },
+    {
+      "path": "sources/sources_4790000_4800000.parquet",
+      "size": 25814864,
+      "mtimeNs": 1784810753158390561
+    },
+    {
+      "path": "sources/sources_4800000_4810000.parquet",
+      "size": 27485895,
+      "mtimeNs": 1784810657924389026
+    },
+    {
+      "path": "sources/sources_480000_490000.parquet",
+      "size": 26498152,
+      "mtimeNs": 1784810713151389916
+    },
+    {
+      "path": "sources/sources_4810000_4820000.parquet",
+      "size": 28224918,
+      "mtimeNs": 1784810729459390179
+    },
+    {
+      "path": "sources/sources_4820000_4830000.parquet",
+      "size": 28727875,
+      "mtimeNs": 1784810710912389880
+    },
+    {
+      "path": "sources/sources_4830000_4840000.parquet",
+      "size": 28900798,
+      "mtimeNs": 1784810719871390025
+    },
+    {
+      "path": "sources/sources_4840000_4850000.parquet",
+      "size": 29320906,
+      "mtimeNs": 1784810692883389589
+    },
+    {
+      "path": "sources/sources_4850000_4860000.parquet",
+      "size": 29998427,
+      "mtimeNs": 1784810762197390707
+    },
+    {
+      "path": "sources/sources_4860000_4870000.parquet",
+      "size": 30192067,
+      "mtimeNs": 1784810758283390644
+    },
+    {
+      "path": "sources/sources_4870000_4880000.parquet",
+      "size": 30965455,
+      "mtimeNs": 1784810721221390046
+    },
+    {
+      "path": "sources/sources_4880000_4890000.parquet",
+      "size": 32177508,
+      "mtimeNs": 1784810822503391680
+    },
+    {
+      "path": "sources/sources_4890000_4900000.parquet",
+      "size": 29587240,
+      "mtimeNs": 1784810745419390437
+    },
+    {
+      "path": "sources/sources_4900000_4910000.parquet",
+      "size": 31366595,
+      "mtimeNs": 1784810712901389912
+    },
+    {
+      "path": "sources/sources_490000_500000.parquet",
+      "size": 26416016,
+      "mtimeNs": 1784810761012390688
+    },
+    {
+      "path": "sources/sources_4910000_4920000.parquet",
+      "size": 32145105,
+      "mtimeNs": 1784810772769390878
+    },
+    {
+      "path": "sources/sources_4920000_4930000.parquet",
+      "size": 32214046,
+      "mtimeNs": 1784810865407392372
+    },
+    {
+      "path": "sources/sources_4930000_4940000.parquet",
+      "size": 29208847,
+      "mtimeNs": 1784810781962391026
+    },
+    {
+      "path": "sources/sources_4940000_4950000.parquet",
+      "size": 33688361,
+      "mtimeNs": 1784810748821390491
+    },
+    {
+      "path": "sources/sources_4950000_4960000.parquet",
+      "size": 32908813,
+      "mtimeNs": 1784810748877390492
+    },
+    {
+      "path": "sources/sources_4960000_4970000.parquet",
+      "size": 32466154,
+      "mtimeNs": 1784810779827390992
+    },
+    {
+      "path": "sources/sources_4970000_4980000.parquet",
+      "size": 33191146,
+      "mtimeNs": 1784810785844391089
+    },
+    {
+      "path": "sources/sources_4980000_4990000.parquet",
+      "size": 33019368,
+      "mtimeNs": 1784810792675391199
+    },
+    {
+      "path": "sources/sources_4990000_5000000.parquet",
+      "size": 33659367,
+      "mtimeNs": 1784810803085391367
+    },
+    {
+      "path": "sources/sources_5000000_5010000.parquet",
+      "size": 33811047,
+      "mtimeNs": 1784810777388390952
+    },
+    {
+      "path": "sources/sources_500000_510000.parquet",
+      "size": 25860262,
+      "mtimeNs": 1784810788617391133
+    },
+    {
+      "path": "sources/sources_50000_60000.parquet",
+      "size": 26575203,
+      "mtimeNs": 1784810738103390319
+    },
+    {
+      "path": "sources/sources_5010000_5020000.parquet",
+      "size": 33648074,
+      "mtimeNs": 1784810760123390674
+    },
+    {
+      "path": "sources/sources_5020000_5030000.parquet",
+      "size": 34194840,
+      "mtimeNs": 1784810804903391396
+    },
+    {
+      "path": "sources/sources_5030000_5040000.parquet",
+      "size": 34784192,
+      "mtimeNs": 1784810819094391625
+    },
+    {
+      "path": "sources/sources_5040000_5050000.parquet",
+      "size": 34945443,
+      "mtimeNs": 1784810805177391400
+    },
+    {
+      "path": "sources/sources_5050000_5060000.parquet",
+      "size": 34719585,
+      "mtimeNs": 1784810806070391415
+    },
+    {
+      "path": "sources/sources_5060000_5070000.parquet",
+      "size": 34423182,
+      "mtimeNs": 1784810802815391362
+    },
+    {
+      "path": "sources/sources_5070000_5080000.parquet",
+      "size": 33974734,
+      "mtimeNs": 1784810812426391517
+    },
+    {
+      "path": "sources/sources_5080000_5090000.parquet",
+      "size": 34992725,
+      "mtimeNs": 1784810840726391974
+    },
+    {
+      "path": "sources/sources_5090000_5100000.parquet",
+      "size": 34773882,
+      "mtimeNs": 1784810823132391690
+    },
+    {
+      "path": "sources/sources_5100000_5110000.parquet",
+      "size": 34728996,
+      "mtimeNs": 1784810864850392363
+    },
+    {
+      "path": "sources/sources_510000_520000.parquet",
+      "size": 26243067,
+      "mtimeNs": 1784810807458391437
+    },
+    {
+      "path": "sources/sources_5110000_5120000.parquet",
+      "size": 34343227,
+      "mtimeNs": 1784810829829391798
+    },
+    {
+      "path": "sources/sources_5120000_5130000.parquet",
+      "size": 34982087,
+      "mtimeNs": 1784810844347392032
+    },
+    {
+      "path": "sources/sources_5130000_5140000.parquet",
+      "size": 34616129,
+      "mtimeNs": 1784810872048392479
+    },
+    {
+      "path": "sources/sources_5140000_5150000.parquet",
+      "size": 35437423,
+      "mtimeNs": 1784810887804392733
+    },
+    {
+      "path": "sources/sources_5150000_5160000.parquet",
+      "size": 35103282,
+      "mtimeNs": 1784810853897392186
+    },
+    {
+      "path": "sources/sources_5160000_5170000.parquet",
+      "size": 34686388,
+      "mtimeNs": 1784810824588391713
+    },
+    {
+      "path": "sources/sources_5170000_5180000.parquet",
+      "size": 35152403,
+      "mtimeNs": 1784810827997391768
+    },
+    {
+      "path": "sources/sources_5180000_5190000.parquet",
+      "size": 35931031,
+      "mtimeNs": 1784810873668392505
+    },
+    {
+      "path": "sources/sources_5190000_5200000.parquet",
+      "size": 36296992,
+      "mtimeNs": 1784810848212392094
+    },
+    {
+      "path": "sources/sources_5200000_5210000.parquet",
+      "size": 35566492,
+      "mtimeNs": 1784810831144391819
+    },
+    {
+      "path": "sources/sources_520000_530000.parquet",
+      "size": 26209188,
+      "mtimeNs": 1784810775895390928
+    },
+    {
+      "path": "sources/sources_5210000_5220000.parquet",
+      "size": 35552295,
+      "mtimeNs": 1784810828786391781
+    },
+    {
+      "path": "sources/sources_5220000_5230000.parquet",
+      "size": 35693271,
+      "mtimeNs": 1784810881211392627
+    },
+    {
+      "path": "sources/sources_5230000_5240000.parquet",
+      "size": 35856448,
+      "mtimeNs": 1784810918045393221
+    },
+    {
+      "path": "sources/sources_5240000_5250000.parquet",
+      "size": 35831005,
+      "mtimeNs": 1784810892910392815
+    },
+    {
+      "path": "sources/sources_5250000_5260000.parquet",
+      "size": 35464814,
+      "mtimeNs": 1784810889150392755
+    },
+    {
+      "path": "sources/sources_5260000_5270000.parquet",
+      "size": 36142997,
+      "mtimeNs": 1784810897764392893
+    },
+    {
+      "path": "sources/sources_5270000_5280000.parquet",
+      "size": 35738654,
+      "mtimeNs": 1784810898117392899
+    },
+    {
+      "path": "sources/sources_5280000_5290000.parquet",
+      "size": 36183384,
+      "mtimeNs": 1784810902560392971
+    },
+    {
+      "path": "sources/sources_5290000_5300000.parquet",
+      "size": 35656992,
+      "mtimeNs": 1784810855439392211
+    },
+    {
+      "path": "sources/sources_5300000_5310000.parquet",
+      "size": 36319342,
+      "mtimeNs": 1784810927232393369
+    },
+    {
+      "path": "sources/sources_530000_540000.parquet",
+      "size": 25828928,
+      "mtimeNs": 1784810788476391131
+    },
+    {
+      "path": "sources/sources_5310000_5320000.parquet",
+      "size": 36481984,
+      "mtimeNs": 1784810936699393521
+    },
+    {
+      "path": "sources/sources_5320000_5330000.parquet",
+      "size": 36346926,
+      "mtimeNs": 1784810904554393003
+    },
+    {
+      "path": "sources/sources_5330000_5340000.parquet",
+      "size": 36338926,
+      "mtimeNs": 1784810916400393194
+    },
+    {
+      "path": "sources/sources_5340000_5350000.parquet",
+      "size": 36611493,
+      "mtimeNs": 1784810905855393024
+    },
+    {
+      "path": "sources/sources_5350000_5360000.parquet",
+      "size": 36577190,
+      "mtimeNs": 1784810924717393328
+    },
+    {
+      "path": "sources/sources_5360000_5370000.parquet",
+      "size": 36907564,
+      "mtimeNs": 1784810922675393295
+    },
+    {
+      "path": "sources/sources_5370000_5380000.parquet",
+      "size": 36052306,
+      "mtimeNs": 1784810954701393812
+    },
+    {
+      "path": "sources/sources_5380000_5390000.parquet",
+      "size": 37247323,
+      "mtimeNs": 1784810905412393017
+    },
+    {
+      "path": "sources/sources_5390000_5400000.parquet",
+      "size": 37112180,
+      "mtimeNs": 1784810916489393195
+    },
+    {
+      "path": "sources/sources_5400000_5410000.parquet",
+      "size": 35966131,
+      "mtimeNs": 1784810975359394145
+    },
+    {
+      "path": "sources/sources_540000_550000.parquet",
+      "size": 26014565,
+      "mtimeNs": 1784810865475392373
+    },
+    {
+      "path": "sources/sources_5410000_5420000.parquet",
+      "size": 36692701,
+      "mtimeNs": 1784810947421393694
+    },
+    {
+      "path": "sources/sources_5420000_5430000.parquet",
+      "size": 35525375,
+      "mtimeNs": 1784810969517394051
+    },
+    {
+      "path": "sources/sources_5430000_5440000.parquet",
+      "size": 36072869,
+      "mtimeNs": 1784810880250392611
+    },
+    {
+      "path": "sources/sources_5440000_5450000.parquet",
+      "size": 37429424,
+      "mtimeNs": 1784810960179393900
+    },
+    {
+      "path": "sources/sources_5450000_5460000.parquet",
+      "size": 36503627,
+      "mtimeNs": 1784810943242393627
+    },
+    {
+      "path": "sources/sources_5460000_5470000.parquet",
+      "size": 33247634,
+      "mtimeNs": 1784810943513393631
+    },
+    {
+      "path": "sources/sources_5470000_5480000.parquet",
+      "size": 19224865,
+      "mtimeNs": 1784810866486392389
+    },
+    {
+      "path": "sources/sources_5480000_5490000.parquet",
+      "size": 21902627,
+      "mtimeNs": 1784810872515392486
+    },
+    {
+      "path": "sources/sources_5490000_5500000.parquet",
+      "size": 25243190,
+      "mtimeNs": 1784810879978392607
+    },
+    {
+      "path": "sources/sources_5500000_5510000.parquet",
+      "size": 28648624,
+      "mtimeNs": 1784810907427393049
+    },
+    {
+      "path": "sources/sources_550000_560000.parquet",
+      "size": 25801599,
+      "mtimeNs": 1784810882027392640
+    },
+    {
+      "path": "sources/sources_5510000_5520000.parquet",
+      "size": 29393717,
+      "mtimeNs": 1784810955494393824
+    },
+    {
+      "path": "sources/sources_5520000_5530000.parquet",
+      "size": 29650957,
+      "mtimeNs": 1784810940726393586
+    },
+    {
+      "path": "sources/sources_5530000_5540000.parquet",
+      "size": 28614086,
+      "mtimeNs": 1784810949600393729
+    },
+    {
+      "path": "sources/sources_5540000_5550000.parquet",
+      "size": 25040575,
+      "mtimeNs": 1784810940709393586
+    },
+    {
+      "path": "sources/sources_5550000_5560000.parquet",
+      "size": 24191166,
+      "mtimeNs": 1784810855250392208
+    },
+    {
+      "path": "sources/sources_5560000_5570000.parquet",
+      "size": 25896603,
+      "mtimeNs": 1784810876944392558
+    },
+    {
+      "path": "sources/sources_5570000_5580000.parquet",
+      "size": 25617573,
+      "mtimeNs": 1784810928394393387
+    },
+    {
+      "path": "sources/sources_5580000_5590000.parquet",
+      "size": 26023644,
+      "mtimeNs": 1784810917390393210
+    },
+    {
+      "path": "sources/sources_5590000_5600000.parquet",
+      "size": 26462162,
+      "mtimeNs": 1784810942000393607
+    },
+    {
+      "path": "sources/sources_5600000_5610000.parquet",
+      "size": 23479122,
+      "mtimeNs": 1784810945580393665
+    },
+    {
+      "path": "sources/sources_560000_570000.parquet",
+      "size": 26150247,
+      "mtimeNs": 1784810945241393659
+    },
+    {
+      "path": "sources/sources_5610000_5620000.parquet",
+      "size": 25074592,
+      "mtimeNs": 1784810961331393919
+    },
+    {
+      "path": "sources/sources_5620000_5630000.parquet",
+      "size": 24967506,
+      "mtimeNs": 1784810954800393813
+    },
+    {
+      "path": "sources/sources_5630000_5640000.parquet",
+      "size": 24321219,
+      "mtimeNs": 1784810957004393849
+    },
+    {
+      "path": "sources/sources_5640000_5650000.parquet",
+      "size": 24163791,
+      "mtimeNs": 1784810927628393375
+    },
+    {
+      "path": "sources/sources_5650000_5660000.parquet",
+      "size": 24268442,
+      "mtimeNs": 1784810973633394117
+    },
+    {
+      "path": "sources/sources_5660000_5670000.parquet",
+      "size": 24332197,
+      "mtimeNs": 1784810976163394158
+    },
+    {
+      "path": "sources/sources_5670000_5680000.parquet",
+      "size": 25646966,
+      "mtimeNs": 1784810971375394081
+    },
+    {
+      "path": "sources/sources_5680000_5690000.parquet",
+      "size": 26584546,
+      "mtimeNs": 1784810963394393952
+    },
+    {
+      "path": "sources/sources_5690000_5700000.parquet",
+      "size": 25356908,
+      "mtimeNs": 1784810957200393852
+    },
+    {
+      "path": "sources/sources_5700000_5710000.parquet",
+      "size": 25948138,
+      "mtimeNs": 1784811001321394563
+    },
+    {
+      "path": "sources/sources_570000_580000.parquet",
+      "size": 25847077,
+      "mtimeNs": 1784810996335394483
+    },
+    {
+      "path": "sources/sources_5710000_5720000.parquet",
+      "size": 26119856,
+      "mtimeNs": 1784810994184394448
+    },
+    {
+      "path": "sources/sources_5720000_5730000.parquet",
+      "size": 29140077,
+      "mtimeNs": 1784811023236394917
+    },
+    {
+      "path": "sources/sources_5730000_5740000.parquet",
+      "size": 29230332,
+      "mtimeNs": 1784810991239394401
+    },
+    {
+      "path": "sources/sources_5740000_5750000.parquet",
+      "size": 30099688,
+      "mtimeNs": 1784810998374394516
+    },
+    {
+      "path": "sources/sources_5750000_5760000.parquet",
+      "size": 29126921,
+      "mtimeNs": 1784810985519394309
+    },
+    {
+      "path": "sources/sources_5760000_5770000.parquet",
+      "size": 27870300,
+      "mtimeNs": 1784811027721394989
+    },
+    {
+      "path": "sources/sources_5770000_5780000.parquet",
+      "size": 26426167,
+      "mtimeNs": 1784810977354394177
+    },
+    {
+      "path": "sources/sources_5780000_5790000.parquet",
+      "size": 25151650,
+      "mtimeNs": 1784810981183394239
+    },
+    {
+      "path": "sources/sources_5790000_5800000.parquet",
+      "size": 29252724,
+      "mtimeNs": 1784811046376395290
+    },
+    {
+      "path": "sources/sources_5800000_5810000.parquet",
+      "size": 26988723,
+      "mtimeNs": 1784811049732395344
+    },
+    {
+      "path": "sources/sources_580000_590000.parquet",
+      "size": 25389730,
+      "mtimeNs": 1784811029621395020
+    },
+    {
+      "path": "sources/sources_5810000_5820000.parquet",
+      "size": 26487207,
+      "mtimeNs": 1784811029467395017
+    },
+    {
+      "path": "sources/sources_5820000_5830000.parquet",
+      "size": 28837348,
+      "mtimeNs": 1784811050073395350
+    },
+    {
+      "path": "sources/sources_5830000_5840000.parquet",
+      "size": 26799918,
+      "mtimeNs": 1784811017318394821
+    },
+    {
+      "path": "sources/sources_5840000_5850000.parquet",
+      "size": 26814186,
+      "mtimeNs": 1784811001891394573
+    },
+    {
+      "path": "sources/sources_5850000_5860000.parquet",
+      "size": 24380830,
+      "mtimeNs": 1784811014852394782
+    },
+    {
+      "path": "sources/sources_5860000_5870000.parquet",
+      "size": 25011946,
+      "mtimeNs": 1784811006900394653
+    },
+    {
+      "path": "sources/sources_5870000_5880000.parquet",
+      "size": 25728200,
+      "mtimeNs": 1784811031316395047
+    },
+    {
+      "path": "sources/sources_5880000_5890000.parquet",
+      "size": 11750963,
+      "mtimeNs": 1784810924527393325
+    },
+    {
+      "path": "sources/sources_5890000_5900000.parquet",
+      "size": 13068126,
+      "mtimeNs": 1784810934409393484
+    },
+    {
+      "path": "sources/sources_5900000_5910000.parquet",
+      "size": 9209192,
+      "mtimeNs": 1784810917455393211
+    },
+    {
+      "path": "sources/sources_590000_600000.parquet",
+      "size": 25865883,
+      "mtimeNs": 1784810961774393926
+    },
+    {
+      "path": "sources/sources_5910000_5920000.parquet",
+      "size": 23195274,
+      "mtimeNs": 1784811010193394707
+    },
+    {
+      "path": "sources/sources_5920000_5930000.parquet",
+      "size": 27418276,
+      "mtimeNs": 1784811065416395597
+    },
+    {
+      "path": "sources/sources_5930000_5940000.parquet",
+      "size": 27346556,
+      "mtimeNs": 1784811074160395738
+    },
+    {
+      "path": "sources/sources_5940000_5950000.parquet",
+      "size": 26145277,
+      "mtimeNs": 1784811053705395408
+    },
+    {
+      "path": "sources/sources_5950000_5960000.parquet",
+      "size": 26423285,
+      "mtimeNs": 1784811055768395442
+    },
+    {
+      "path": "sources/sources_5960000_5970000.parquet",
+      "size": 26915250,
+      "mtimeNs": 1784811063294395563
+    },
+    {
+      "path": "sources/sources_5970000_5980000.parquet",
+      "size": 22294598,
+      "mtimeNs": 1784811033064395075
+    },
+    {
+      "path": "sources/sources_5980000_5990000.parquet",
+      "size": 24285607,
+      "mtimeNs": 1784811070192395674
+    },
+    {
+      "path": "sources/sources_5990000_6000000.parquet",
+      "size": 26185829,
+      "mtimeNs": 1784811048776395329
+    },
+    {
+      "path": "sources/sources_6000000_6010000.parquet",
+      "size": 29329872,
+      "mtimeNs": 1784811137395396758
+    },
+    {
+      "path": "sources/sources_600000_610000.parquet",
+      "size": 25992582,
+      "mtimeNs": 1784811062224395546
+    },
+    {
+      "path": "sources/sources_60000_70000.parquet",
+      "size": 25962538,
+      "mtimeNs": 1784811087266395949
+    },
+    {
+      "path": "sources/sources_6010000_6020000.parquet",
+      "size": 31083261,
+      "mtimeNs": 1784811056756395457
+    },
+    {
+      "path": "sources/sources_6020000_6030000.parquet",
+      "size": 31291291,
+      "mtimeNs": 1784811075023395752
+    },
+    {
+      "path": "sources/sources_6030000_6040000.parquet",
+      "size": 32678928,
+      "mtimeNs": 1784811120207396481
+    },
+    {
+      "path": "sources/sources_6040000_6050000.parquet",
+      "size": 22072729,
+      "mtimeNs": 1784810999363394532
+    },
+    {
+      "path": "sources/sources_6050000_6060000.parquet",
+      "size": 20764884,
+      "mtimeNs": 1784811044314395257
+    },
+    {
+      "path": "sources/sources_6060000_6070000.parquet",
+      "size": 22458743,
+      "mtimeNs": 1784811048010395316
+    },
+    {
+      "path": "sources/sources_6070000_6080000.parquet",
+      "size": 24461466,
+      "mtimeNs": 1784811064066395575
+    },
+    {
+      "path": "sources/sources_6080000_6090000.parquet",
+      "size": 24258287,
+      "mtimeNs": 1784811040728395199
+    },
+    {
+      "path": "sources/sources_6090000_6100000.parquet",
+      "size": 25484565,
+      "mtimeNs": 1784811067106395624
+    },
+    {
+      "path": "sources/sources_6100000_6110000.parquet",
+      "size": 25705262,
+      "mtimeNs": 1784811131050396656
+    },
+    {
+      "path": "sources/sources_610000_620000.parquet",
+      "size": 26079407,
+      "mtimeNs": 1784811105328396241
+    },
+    {
+      "path": "sources/sources_6110000_6120000.parquet",
+      "size": 25871622,
+      "mtimeNs": 1784811080680395843
+    },
+    {
+      "path": "sources/sources_6120000_6130000.parquet",
+      "size": 26776843,
+      "mtimeNs": 1784811101987396187
+    },
+    {
+      "path": "sources/sources_6130000_6140000.parquet",
+      "size": 27436690,
+      "mtimeNs": 1784811108673396295
+    },
+    {
+      "path": "sources/sources_6140000_6150000.parquet",
+      "size": 27423194,
+      "mtimeNs": 1784811093387396048
+    },
+    {
+      "path": "sources/sources_6150000_6160000.parquet",
+      "size": 28440651,
+      "mtimeNs": 1784811118883396459
+    },
+    {
+      "path": "sources/sources_6160000_6170000.parquet",
+      "size": 27829870,
+      "mtimeNs": 1784811089387395984
+    },
+    {
+      "path": "sources/sources_6170000_6180000.parquet",
+      "size": 25510542,
+      "mtimeNs": 1784811097203396110
+    },
+    {
+      "path": "sources/sources_6180000_6190000.parquet",
+      "size": 26533495,
+      "mtimeNs": 1784811086047395930
+    },
+    {
+      "path": "sources/sources_6190000_6200000.parquet",
+      "size": 26313427,
+      "mtimeNs": 1784811114780396393
+    },
+    {
+      "path": "sources/sources_6200000_6210000.parquet",
+      "size": 26903437,
+      "mtimeNs": 1784811160939397138
+    },
+    {
+      "path": "sources/sources_620000_630000.parquet",
+      "size": 26694529,
+      "mtimeNs": 1784811087682395956
+    },
+    {
+      "path": "sources/sources_6210000_6220000.parquet",
+      "size": 27802981,
+      "mtimeNs": 1784811128949396622
+    },
+    {
+      "path": "sources/sources_6220000_6230000.parquet",
+      "size": 27027951,
+      "mtimeNs": 1784811119161396464
+    },
+    {
+      "path": "sources/sources_6230000_6240000.parquet",
+      "size": 20577094,
+      "mtimeNs": 1784811078128395802
+    },
+    {
+      "path": "sources/sources_630000_640000.parquet",
+      "size": 26418024,
+      "mtimeNs": 1784811097205396110
+    },
+    {
+      "path": "sources/sources_640000_650000.parquet",
+      "size": 25818913,
+      "mtimeNs": 1784811097781396119
+    },
+    {
+      "path": "sources/sources_650000_660000.parquet",
+      "size": 26362961,
+      "mtimeNs": 1784811111381396338
+    },
+    {
+      "path": "sources/sources_660000_670000.parquet",
+      "size": 26087967,
+      "mtimeNs": 1784811086445395936
+    },
+    {
+      "path": "sources/sources_670000_680000.parquet",
+      "size": 26211525,
+      "mtimeNs": 1784811098496396131
+    },
+    {
+      "path": "sources/sources_680000_690000.parquet",
+      "size": 26623850,
+      "mtimeNs": 1784811114349396386
+    },
+    {
+      "path": "sources/sources_690000_700000.parquet",
+      "size": 25903615,
+      "mtimeNs": 1784811117975396445
+    },
+    {
+      "path": "sources/sources_700000_710000.parquet",
+      "size": 26417619,
+      "mtimeNs": 1784811132857396685
+    },
+    {
+      "path": "sources/sources_70000_80000.parquet",
+      "size": 25908801,
+      "mtimeNs": 1784811133313396692
+    },
+    {
+      "path": "sources/sources_710000_720000.parquet",
+      "size": 26205375,
+      "mtimeNs": 1784811130360396644
+    },
+    {
+      "path": "sources/sources_720000_730000.parquet",
+      "size": 26242117,
+      "mtimeNs": 1784811154278397030
+    },
+    {
+      "path": "sources/sources_730000_740000.parquet",
+      "size": 26336333,
+      "mtimeNs": 1784811151448396985
+    },
+    {
+      "path": "sources/sources_740000_750000.parquet",
+      "size": 26334290,
+      "mtimeNs": 1784811152137396996
+    },
+    {
+      "path": "sources/sources_750000_760000.parquet",
+      "size": 26228330,
+      "mtimeNs": 1784811168481397259
+    },
+    {
+      "path": "sources/sources_760000_770000.parquet",
+      "size": 26595171,
+      "mtimeNs": 1784811137716396763
+    },
+    {
+      "path": "sources/sources_770000_780000.parquet",
+      "size": 25262111,
+      "mtimeNs": 1784811106052396252
+    },
+    {
+      "path": "sources/sources_780000_790000.parquet",
+      "size": 26046049,
+      "mtimeNs": 1784811172285397321
+    },
+    {
+      "path": "sources/sources_790000_800000.parquet",
+      "size": 26222734,
+      "mtimeNs": 1784811132386396677
+    },
+    {
+      "path": "sources/sources_800000_810000.parquet",
+      "size": 27113927,
+      "mtimeNs": 1784811165144397205
+    },
+    {
+      "path": "sources/sources_80000_90000.parquet",
+      "size": 25530171,
+      "mtimeNs": 1784811183353397499
+    },
+    {
+      "path": "sources/sources_810000_820000.parquet",
+      "size": 25727118,
+      "mtimeNs": 1784811157635397084
+    },
+    {
+      "path": "sources/sources_820000_830000.parquet",
+      "size": 25539384,
+      "mtimeNs": 1784811107699396279
+    },
+    {
+      "path": "sources/sources_830000_840000.parquet",
+      "size": 26411631,
+      "mtimeNs": 1784811196768397715
+    },
+    {
+      "path": "sources/sources_840000_850000.parquet",
+      "size": 26158958,
+      "mtimeNs": 1784811177156397399
+    },
+    {
+      "path": "sources/sources_850000_860000.parquet",
+      "size": 26943445,
+      "mtimeNs": 1784811171083397301
+    },
+    {
+      "path": "sources/sources_860000_870000.parquet",
+      "size": 26130082,
+      "mtimeNs": 1784811150299396966
+    },
+    {
+      "path": "sources/sources_870000_880000.parquet",
+      "size": 26523941,
+      "mtimeNs": 1784811179707397440
+    },
+    {
+      "path": "sources/sources_880000_890000.parquet",
+      "size": 26140216,
+      "mtimeNs": 1784811186205397545
+    },
+    {
+      "path": "sources/sources_890000_900000.parquet",
+      "size": 26290842,
+      "mtimeNs": 1784811186224397545
+    },
+    {
+      "path": "sources/sources_900000_910000.parquet",
+      "size": 26240260,
+      "mtimeNs": 1784811198856397749
+    },
+    {
+      "path": "sources/sources_90000_100000.parquet",
+      "size": 26504711,
+      "mtimeNs": 1784811175468397372
+    },
+    {
+      "path": "sources/sources_910000_920000.parquet",
+      "size": 25994324,
+      "mtimeNs": 1784811173981397348
+    },
+    {
+      "path": "sources/sources_920000_930000.parquet",
+      "size": 26405895,
+      "mtimeNs": 1784811153572397019
+    },
+    {
+      "path": "sources/sources_930000_940000.parquet",
+      "size": 26182016,
+      "mtimeNs": 1784811164526397195
+    },
+    {
+      "path": "sources/sources_940000_950000.parquet",
+      "size": 26155184,
+      "mtimeNs": 1784811199076397753
+    },
+    {
+      "path": "sources/sources_950000_960000.parquet",
+      "size": 25766577,
+      "mtimeNs": 1784811194072397672
+    },
+    {
+      "path": "sources/sources_960000_970000.parquet",
+      "size": 26262900,
+      "mtimeNs": 1784811188817397587
+    },
+    {
+      "path": "sources/sources_970000_980000.parquet",
+      "size": 26393287,
+      "mtimeNs": 1784811167935397250
+    },
+    {
+      "path": "sources/sources_980000_990000.parquet",
+      "size": 26657092,
+      "mtimeNs": 1784811192891397653
+    },
+    {
+      "path": "sources/sources_990000_1000000.parquet",
+      "size": 26111262,
+      "mtimeNs": 1784811199768397764
+    },
+    {
       "path": "contracts/contracts_0_1000000.parquet",
       "size": 58089237,
       "mtimeNs": 1781871597658307326
@@ -1986,6 +5106,186 @@
       "path": "contracts/contracts_9000000_10000000.parquet",
       "size": 74108452,
       "mtimeNs": 1781871689968305707
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_0_1000000.parquet",
+      "size": 65625437,
+      "mtimeNs": 1784811279586399051
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_10000000_11000000.parquet",
+      "size": 65607886,
+      "mtimeNs": 1784811270748398908
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_1000000_2000000.parquet",
+      "size": 65483245,
+      "mtimeNs": 1784811293052399268
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_11000000_12000000.parquet",
+      "size": 65535197,
+      "mtimeNs": 1784811291023399235
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_12000000_13000000.parquet",
+      "size": 65522751,
+      "mtimeNs": 1784811279900399056
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_13000000_14000000.parquet",
+      "size": 65660859,
+      "mtimeNs": 1784811286010399155
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_14000000_15000000.parquet",
+      "size": 65648029,
+      "mtimeNs": 1784811296596399325
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_15000000_16000000.parquet",
+      "size": 55260618,
+      "mtimeNs": 1784811291477399243
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_16000000_17000000.parquet",
+      "size": 39735870,
+      "mtimeNs": 1784811254060398639
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_17000000_18000000.parquet",
+      "size": 35137871,
+      "mtimeNs": 1784811225912398185
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_18000000_19000000.parquet",
+      "size": 38320268,
+      "mtimeNs": 1784811232701398295
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_19000000_20000000.parquet",
+      "size": 54745789,
+      "mtimeNs": 1784811287969399186
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_20000000_21000000.parquet",
+      "size": 59733073,
+      "mtimeNs": 1784811283786399119
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_2000000_3000000.parquet",
+      "size": 65555267,
+      "mtimeNs": 1784811297387399338
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_21000000_22000000.parquet",
+      "size": 59416031,
+      "mtimeNs": 1784811297918399347
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_22000000_23000000.parquet",
+      "size": 58059016,
+      "mtimeNs": 1784811275951398992
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_23000000_24000000.parquet",
+      "size": 45421419,
+      "mtimeNs": 1784811248275398546
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_24000000_25000000.parquet",
+      "size": 45872838,
+      "mtimeNs": 1784811286396399161
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_25000000_26000000.parquet",
+      "size": 45693927,
+      "mtimeNs": 1784811272507398937
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_26000000_27000000.parquet",
+      "size": 45883999,
+      "mtimeNs": 1784811265944398831
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_27000000_28000000.parquet",
+      "size": 40461035,
+      "mtimeNs": 1784811256647398681
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_28000000_29000000.parquet",
+      "size": 42708362,
+      "mtimeNs": 1784811257799398700
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_29000000_30000000.parquet",
+      "size": 47507846,
+      "mtimeNs": 1784811263213398787
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_30000000_31000000.parquet",
+      "size": 47945127,
+      "mtimeNs": 1784811255141398657
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_3000000_4000000.parquet",
+      "size": 65499529,
+      "mtimeNs": 1784811297042399332
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_31000000_32000000.parquet",
+      "size": 36252784,
+      "mtimeNs": 1784811240433398420
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_32000000_33000000.parquet",
+      "size": 37635044,
+      "mtimeNs": 1784811256526398679
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_33000000_34000000.parquet",
+      "size": 38074221,
+      "mtimeNs": 1784811238644398391
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_34000000_35000000.parquet",
+      "size": 36806604,
+      "mtimeNs": 1784811259686398730
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_35000000_36000000.parquet",
+      "size": 22847774,
+      "mtimeNs": 1784811232143398286
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_4000000_5000000.parquet",
+      "size": 65634880,
+      "mtimeNs": 1784811290132399221
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_5000000_6000000.parquet",
+      "size": 65558482,
+      "mtimeNs": 1784811293733399279
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_6000000_7000000.parquet",
+      "size": 65519414,
+      "mtimeNs": 1784811291666399246
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_7000000_8000000.parquet",
+      "size": 65649828,
+      "mtimeNs": 1784811296865399330
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_8000000_9000000.parquet",
+      "size": 65618016,
+      "mtimeNs": 1784811294757399296
+    },
+    {
+      "path": "compiled_contracts_sources/compiled_contracts_sources_9000000_10000000.parquet",
+      "size": 65675124,
+      "mtimeNs": 1784811292554399260
     },
     {
       "path": "contract_deployments/contract_deployments_0_1000000.parquet",

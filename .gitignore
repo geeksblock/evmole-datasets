@@ -7,3 +7,4 @@
 !scripts/**/*
 !releases
 !releases/**/*
+scripts/sourcify_parquet/cache
