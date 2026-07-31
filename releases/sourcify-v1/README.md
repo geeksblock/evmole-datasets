@@ -25,8 +25,8 @@ target declaration, including libraries without the usual bytecode prefix.
 The release was checked by:
 
 - regenerating every archive and comparing it byte-for-byte;
-- running the Etherscan reference selector extraction on every contract;
-- running storage ground-truth conversion on all 1,000 storage contracts; and
+- running the benchmark reference selector extraction on every contract;
+- running storage reference conversion on all 1,000 storage contracts; and
 - running EVMole basic-block and control-flow extraction on all 500 flow
   contracts.
 
